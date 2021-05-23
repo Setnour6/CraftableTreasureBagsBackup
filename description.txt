@@ -1,0 +1,59 @@
+Have you ever wanted to get expert mode exclusive boss drops in normal mode? Well now you can, with Craftable Treasure Bags. This mod allows you to get expert mode items in normal mode, from crafting boss treasure bags and opening them right in normal mode!
+
+This mod contains recipes for all vanilla boss treasure bags (Not including the Wall of Flesh and bosses/minibosses from the Old One's Army).
+All treasure bags are to be crafted with an empty treasure bag at a Demon Altar, as well as certain items that can be used to make treasure bags (and modded ones). Make sure to also have the boss summoning item (some recipes may require other items instead of boss summoning items).
+Craft an empty treasure bag with 10 silk at a loom.
+Craft a boss treasure bag with boss loot and the respective boss summon item (some other recipes require different items as well besides boss loot only).
+Some modded recipes do not use boss summon items to make the treasure bag.
+
+This mod includes modded treasure bag recipes for the following mods:
+- AlchemistNPC [i/s1:75]
+- Ancients Awakened
+- [c/0000FF:Azer][c/00C6FF:cad][c/00FFA6:mium]
+- Calamity
+- Elements Awoken
+- Enigma
+- Joost
+- Mod of Redemption
+- [c/f79bcf:Pinkymod]
+- Qwerty's Bosses and Items
+- Shadows of Abaddon
+- Spirit [i/s1:75]
+- Split
+- Thorium
+- Ultranium
+[i/s1:75] = Overhauled most/all recipes and/or added a treasure item.
+
+*Updates will be [c/DE2020:less frequent] due to real life complications.*
+
+Q: "Why are there multiple modded treasure bag recipes popping up?"
+A: I don't know how to utilize recipe groups for modded items. I only know how to utilize recipe groups with vanilla items.
+
+If you have any questions or concerns, feel free to message me on YouTube or Email. Social platforms I use are listed below.
+
+~~~~~~
+
+YouTube: Setnour6
+SoundCloud: Setnour6
+Spotify: Setnour6
+Email: set.nour6@gmail.com
+
+~~~~~~
+
+Version 0.15:
+- EVENT: You can now craft a pre-hardmode treasure bag of your choice with the Celebratory Pendant, which appears upon character creation. Thank you all for 50,000 Downloads!
+	- You only have two chances, so choose wisely ;)
+- Updated the title from Craftable Treasure Bags - Modded Bags Included to Craftable Treasure Bags. Everyone knows that it's not vanilla-restricted.
+- All Vanilla bosses now require Gold/Platinum pendants.
+- Added Bismite Pendant and Spirit Pendant, which can only be obtained if the Spirit Mod is Enabled.
+- Changed all of the recipes for the Spirit Mod boss treasure bags. (Removing weapon loot to craft, adding herbs and other items to craft with, pendants as well, etc.)
+
+Version 0.14:
+- Changed the maximum stack of Empty Treasure Bags from 999 to 99.
+- Empty Treasure Bags now require black string to be crafted (let me know if you do not like this change).
+- Duke Fishron and Moon Lord treasure bags now require moonglow to craft. The Moon Lord Treasure Bag additionally requires blinkroot.
+- Added five new items: Gold Pendant, Platinum Pendant, Madness Pendant, Forsaken Pendant, and Soulful Pendant, which can only be crafted if the Ancients Awakened mod is enabled.
+	-  They will be used to make other pendants to make treasure bags from the Ancients Awakened mod.
+- Changed all of the recipes for the Ancients Awakened boss treasure bags. (Removing weapon loot to craft, adding herbs to craft with, adding blocks and materials to craft with, etc. and the pendants too.)
+
+All other versions are listed through the homepage (the button/link goes to the Github releases and shows the changelog for each release)
