@@ -17,7 +17,7 @@ using static Terraria.ModLoader.ModContent;
 using System.Runtime.InteropServices;
 using ReLogic.Graphics;
 using Terraria.GameContent.UI;
-//using CraftableTreasureBags.Items;
+using CraftableTreasureBags.Items;
 using Terraria.ModLoader.Exceptions;
 
 namespace CraftableTreasureBags
@@ -38,16 +38,16 @@ namespace CraftableTreasureBags
 		public static string GithubUserName { get { return "Setnour6"; } }
 		public static string GithubProjectName { get { return "CraftableTreasureBags"; } }
 
-		//public override void AddRecipeGroups()
-		//{
-		//	RecipeGroup group = new RecipeGroup(() => Language.GetTextValue("LegacyMisc.37") + " Gold/Platinum Pendant", new int[]
-		//	{
-		//		ItemType("UglyGoldPendant"),
-		//		ItemType("UglyPlatinumPendant")
+		public override void AddRecipeGroups()
+		{
+			RecipeGroup group = new RecipeGroup(() => Language.GetTextValue("LegacyMisc.37") + " Gold/Platinum Pendant", new int[]
+			{
+				ItemType("GoldPendant"),
+				ItemType("PlatinumPendant")
 
-		//	});
-		//	RecipeGroup.RegisterGroup("CraftableTreasureBags:Gold/Platinum Pendant", group);
-	//	}
+			});
+			RecipeGroup.RegisterGroup("CraftableTreasureBags:Gold/Platinum Pendant", group);
+		}
 
 		public override void Load()
 		{
@@ -71,40 +71,39 @@ namespace CraftableTreasureBags
 		{
 			#region 50,000 downloads celebration
 
-			//	ModRecipe recipe = new ModRecipe(this);
-			//	recipe.AddIngredient(this.GetItem("CelebratoryPendant"));
-			//	recipe.SetResult(ItemID.KingSlimeBossBag);
-			//	recipe.AddRecipe();
-			//	recipe = new ModRecipe(this);
-			//	recipe.AddIngredient(this.GetItem("CelebratoryPendant"));
-			//	recipe.SetResult(ItemID.EyeOfCthulhuBossBag);
-			//	recipe.AddRecipe();
-			//	recipe = new ModRecipe(this);
-			//	recipe.AddIngredient(this.GetItem("CelebratoryPendant"));
-			//	recipe.SetResult(ItemID.EaterOfWorldsBossBag);
-			//	recipe.AddRecipe();
-			//	recipe = new ModRecipe(this);
-			//	recipe.AddIngredient(this.GetItem("CelebratoryPendant"));
-			//	recipe.SetResult(ItemID.BrainOfCthulhuBossBag);
-			//	recipe.AddRecipe();
-			//	recipe = new ModRecipe(this);
-			//	recipe.AddIngredient(this.GetItem("CelebratoryPendant"));
-			//	recipe.SetResult(ItemID.QueenBeeBossBag);
-			//	recipe.AddRecipe();
-			//	recipe = new ModRecipe(this);
-			//	recipe.AddIngredient(this.GetItem("CelebratoryPendant"));
-			//	recipe.SetResult(ItemID.SkeletronBossBag);
-			//	recipe.AddRecipe();
-			//	#endregion 50,000 downloads celebration
+			ModRecipe recipe = new ModRecipe(this);
+			recipe.AddIngredient(this.GetItem("CelebratoryPendant"));
+			recipe.SetResult(ItemID.KingSlimeBossBag);
+			recipe.AddRecipe();
+			recipe = new ModRecipe(this);
+			recipe.AddIngredient(this.GetItem("CelebratoryPendant"));
+			recipe.SetResult(ItemID.EyeOfCthulhuBossBag);
+			recipe.AddRecipe();
+			recipe = new ModRecipe(this);
+			recipe.AddIngredient(this.GetItem("CelebratoryPendant"));
+			recipe.SetResult(ItemID.EaterOfWorldsBossBag);
+			recipe.AddRecipe();
+			recipe = new ModRecipe(this);
+			recipe.AddIngredient(this.GetItem("CelebratoryPendant"));
+			recipe.SetResult(ItemID.BrainOfCthulhuBossBag);
+			recipe.AddRecipe();
+			recipe = new ModRecipe(this);
+			recipe.AddIngredient(this.GetItem("CelebratoryPendant"));
+			recipe.SetResult(ItemID.QueenBeeBossBag);
+			recipe.AddRecipe();
+			recipe = new ModRecipe(this);
+			recipe.AddIngredient(this.GetItem("CelebratoryPendant"));
+			recipe.SetResult(ItemID.SkeletronBossBag);
+			recipe.AddRecipe();
 
 			#endregion 50,000 downloads celebration
 
 			#region Vanilla game
 
-			//recipe = new ModRecipe(this);
-			ModRecipe recipe = new ModRecipe(this);
+			recipe = new ModRecipe(this);
+			//ModRecipe recipe = new ModRecipe(this);
 			recipe.AddIngredient(this.GetItem("EmptyTreasureBag"));
-		//	recipe.AddRecipeGroup("CraftableTreasureBags:Gold/Platinum Pendant");
+			recipe.AddRecipeGroup("CraftableTreasureBags:Gold/Platinum Pendant");
 			//if (ModLoader.GetMod("CalamityMod") != null) || (ModLoader.GetMod("Fargowiltas") != null)
 			//{
 			//recipe.AddIngredient(ItemID.SlimeCrown, 2);
@@ -137,7 +136,7 @@ namespace CraftableTreasureBags
 			//recipe.AddRecipe();
 			recipe = new ModRecipe(this);
 			recipe.AddIngredient(this.GetItem("EmptyTreasureBag"));
-		//	recipe.AddRecipeGroup("CraftableTreasureBags:Gold/Platinum Pendant");
+			recipe.AddRecipeGroup("CraftableTreasureBags:Gold/Platinum Pendant");
 			//if (ModLoader.GetMod("CalamityMod") != null) || (ModLoader.GetMod("Fargowiltas") != null)
 			//{
 			//recipe.AddIngredient(ItemID.SuspiciousLookingEye, 2);
@@ -159,7 +158,7 @@ namespace CraftableTreasureBags
 			recipe.AddRecipe();
 			recipe = new ModRecipe(this);
 			recipe.AddIngredient(this.GetItem("EmptyTreasureBag"));
-		//	recipe.AddRecipeGroup("CraftableTreasureBags:Gold/Platinum Pendant");
+			recipe.AddRecipeGroup("CraftableTreasureBags:Gold/Platinum Pendant");
 			recipe.AddIngredient(ItemID.SuspiciousLookingEye, 1);
 			recipe.AddIngredient(ItemID.CrimtaneOre, 75);
 			recipe.AddIngredient(ItemID.Deathweed, 3);
@@ -174,7 +173,7 @@ namespace CraftableTreasureBags
 			recipe.AddRecipe();
 			recipe = new ModRecipe(this);
 			recipe.AddIngredient(this.GetItem("EmptyTreasureBag"));
-		//	recipe.AddRecipeGroup("CraftableTreasureBags:Gold/Platinum Pendant");
+			recipe.AddRecipeGroup("CraftableTreasureBags:Gold/Platinum Pendant");
 			recipe.AddIngredient(ItemID.WormFood, 1);
 			recipe.AddIngredient(ItemID.DemoniteOre, 100);
 			recipe.AddIngredient(ItemID.Deathweed, 5);
@@ -191,7 +190,7 @@ namespace CraftableTreasureBags
 			recipe.AddRecipe();
 			recipe = new ModRecipe(this);
 			recipe.AddIngredient(this.GetItem("EmptyTreasureBag"));
-		//	recipe.AddRecipeGroup("CraftableTreasureBags:Gold/Platinum Pendant");
+			recipe.AddRecipeGroup("CraftableTreasureBags:Gold/Platinum Pendant");
 			recipe.AddIngredient(ItemID.BloodySpine, 1);
 			recipe.AddIngredient(ItemID.CrimtaneOre, 100);
 			recipe.AddIngredient(ItemID.TissueSample, 50);
@@ -208,7 +207,7 @@ namespace CraftableTreasureBags
 			recipe.AddRecipe();
 			recipe = new ModRecipe(this);
 			recipe.AddIngredient(this.GetItem("EmptyTreasureBag"));
-		//	recipe.AddRecipeGroup("CraftableTreasureBags:Gold/Platinum Pendant");
+			recipe.AddRecipeGroup("CraftableTreasureBags:Gold/Platinum Pendant");
 			recipe.AddIngredient(ItemID.Abeemination, 1);
 			recipe.AddIngredient(ItemID.BeeWax, 20);
 			recipe.AddIngredient(ItemID.BottledHoney, 10);
@@ -223,7 +222,7 @@ namespace CraftableTreasureBags
 			recipe.AddRecipe();
 			recipe = new ModRecipe(this);
 			recipe.AddIngredient(this.GetItem("EmptyTreasureBag"));
-		//	recipe.AddRecipeGroup("CraftableTreasureBags:Gold/Platinum Pendant");
+			recipe.AddRecipeGroup("CraftableTreasureBags:Gold/Platinum Pendant");
 			recipe.AddIngredient(ItemID.ClothierVoodooDoll, 1);
 			recipe.AddIngredient(ItemID.Bone, 100);
 			if (ModLoader.GetMod("CalamityMod") != null)
@@ -240,7 +239,7 @@ namespace CraftableTreasureBags
 			{
 				recipe = new ModRecipe(this);
 				recipe.AddIngredient(this.GetItem("EmptyTreasureBag"));
-		//		recipe.AddRecipeGroup("CraftableTreasureBags:Gold/Platinum Pendant");
+				recipe.AddRecipeGroup("CraftableTreasureBags:Gold/Platinum Pendant");
 				recipe.AddIngredient(ItemID.GuideVoodooDoll, 1);
 				recipe.AddIngredient(ItemID.FleshBlock, 50);
 				recipe.AddIngredient(ItemID.Pwnhammer, 1);
@@ -257,7 +256,7 @@ namespace CraftableTreasureBags
 			}
 			recipe = new ModRecipe(this);
 			recipe.AddIngredient(this.GetItem("EmptyTreasureBag"));
-		//	recipe.AddRecipeGroup("CraftableTreasureBags:Gold/Platinum Pendant");
+			recipe.AddRecipeGroup("CraftableTreasureBags:Gold/Platinum Pendant");
 			recipe.AddIngredient(ItemID.MechanicalWorm, 1);
 			recipe.AddIngredient(ItemID.SoulofMight, 25);
 			recipe.AddIngredient(ItemID.HallowedBar, 15);
@@ -272,7 +271,7 @@ namespace CraftableTreasureBags
 			recipe.AddRecipe();
 			recipe = new ModRecipe(this);
 			recipe.AddIngredient(this.GetItem("EmptyTreasureBag"));
-		//	recipe.AddRecipeGroup("CraftableTreasureBags:Gold/Platinum Pendant");
+			recipe.AddRecipeGroup("CraftableTreasureBags:Gold/Platinum Pendant");
 			recipe.AddIngredient(ItemID.MechanicalEye, 1);
 			recipe.AddIngredient(ItemID.SoulofSight, 25);
 			recipe.AddIngredient(ItemID.HallowedBar, 15);
@@ -287,7 +286,7 @@ namespace CraftableTreasureBags
 			recipe.AddRecipe();
 			recipe = new ModRecipe(this);
 			recipe.AddIngredient(this.GetItem("EmptyTreasureBag"));
-		//	recipe.AddRecipeGroup("CraftableTreasureBags:Gold/Platinum Pendant");
+			recipe.AddRecipeGroup("CraftableTreasureBags:Gold/Platinum Pendant");
 			recipe.AddIngredient(ItemID.MechanicalSkull, 1);
 			recipe.AddIngredient(ItemID.SoulofFright, 25);
 			recipe.AddIngredient(ItemID.HallowedBar, 15);
@@ -302,7 +301,7 @@ namespace CraftableTreasureBags
 			recipe.AddRecipe();
 			recipe = new ModRecipe(this);
 			recipe.AddIngredient(this.GetItem("EmptyTreasureBag"));
-		//	recipe.AddRecipeGroup("CraftableTreasureBags:Gold/Platinum Pendant");
+			recipe.AddRecipeGroup("CraftableTreasureBags:Gold/Platinum Pendant");
 			if (ModLoader.GetMod("CalamityMod") != null)
 			{
 				recipe.AddIngredient((ModLoader.GetMod("CalamityMod").ItemType("BulbofDoom")), 1);
@@ -326,7 +325,7 @@ namespace CraftableTreasureBags
 			recipe.AddRecipe();
 			recipe = new ModRecipe(this);
 			recipe.AddIngredient(this.GetItem("EmptyTreasureBag"));
-		//	recipe.AddRecipeGroup("CraftableTreasureBags:Gold/Platinum Pendant");
+			recipe.AddRecipeGroup("CraftableTreasureBags:Gold/Platinum Pendant");
 			recipe.AddIngredient(ItemID.LihzahrdPowerCell, 5);
 			recipe.AddIngredient(ItemID.BeetleHusk, 5);
 			recipe.AddIngredient(ItemID.SolarTablet, 1);
@@ -341,7 +340,7 @@ namespace CraftableTreasureBags
 			recipe.AddRecipe();
 			recipe = new ModRecipe(this);
 			recipe.AddIngredient(this.GetItem("EmptyTreasureBag"));
-		//	recipe.AddRecipeGroup("CraftableTreasureBags:Gold/Platinum Pendant");
+			recipe.AddRecipeGroup("CraftableTreasureBags:Gold/Platinum Pendant");
 			recipe.AddIngredient(ItemID.TruffleWorm, 1);
 			recipe.AddIngredient(ItemID.FishronWings, 1);
 			recipe.AddIngredient(ItemID.Moonglow, 3);
@@ -364,7 +363,7 @@ namespace CraftableTreasureBags
 			recipe.AddRecipe();
 			recipe = new ModRecipe(this);
 			recipe.AddIngredient(this.GetItem("EmptyTreasureBag"));
-		//	recipe.AddRecipeGroup("CraftableTreasureBags:Gold/Platinum Pendant");
+			recipe.AddRecipeGroup("CraftableTreasureBags:Gold/Platinum Pendant");
 			recipe.AddIngredient(ItemID.CelestialSigil, 1);
 			recipe.AddIngredient(ItemID.LunarOre, 75);
 			recipe.AddIngredient(ItemID.PortalGun, 1);
@@ -449,7 +448,7 @@ namespace CraftableTreasureBags
 			{
 				recipe = new ModRecipe(this);
 				recipe.AddIngredient(this.GetItem("EmptyTreasureBag"));
-			//	recipe.AddIngredient(this.GetItem("MadnessPendant"));
+				recipe.AddIngredient(this.GetItem("MadnessPendant"));
 				recipe.AddIngredient((ModLoader.GetMod("AAMod").ItemType("IntimidatingMushroom")), 1);
 				recipe.AddIngredient((ModLoader.GetMod("AAMod").ItemType("SporeSac")), 30);
 				recipe.AddIngredient((ModLoader.GetMod("AAMod").ItemType("Mushium")), 30);
@@ -459,7 +458,7 @@ namespace CraftableTreasureBags
 				recipe.AddRecipe();
 				recipe = new ModRecipe(this);
 				recipe.AddIngredient(this.GetItem("EmptyTreasureBag"));
-			//	recipe.AddIngredient(this.GetItem("MadnessPendant"));
+				recipe.AddIngredient(this.GetItem("MadnessPendant"));
 				recipe.AddIngredient((ModLoader.GetMod("AAMod").ItemType("ConfusingMushroom")), 1);
 				recipe.AddIngredient((ModLoader.GetMod("AAMod").ItemType("SporeSac")), 50);
 				recipe.AddIngredient((ModLoader.GetMod("AAMod").ItemType("GlowingMushium")), 30);
@@ -469,7 +468,7 @@ namespace CraftableTreasureBags
 				recipe.AddRecipe();
 				recipe = new ModRecipe(this);
 				recipe.AddIngredient(this.GetItem("EmptyTreasureBag"));
-			//	recipe.AddIngredient(this.GetItem("MadnessPendant"));
+				recipe.AddIngredient(this.GetItem("MadnessPendant"));
 				recipe.AddIngredient((ModLoader.GetMod("AAMod").ItemType("CuriousClaw")), 1);
 				recipe.AddIngredient((ModLoader.GetMod("AAMod").ItemType("Incinerite")), 30);
 				recipe.AddIngredient((ModLoader.GetMod("AAMod").ItemType("Abyssium")), 30);
@@ -478,7 +477,7 @@ namespace CraftableTreasureBags
 				recipe.AddRecipe();
 				recipe = new ModRecipe(this);
 				recipe.AddIngredient(this.GetItem("EmptyTreasureBag"));
-			//	recipe.AddIngredient(this.GetItem("MadnessPendant"));
+				recipe.AddIngredient(this.GetItem("MadnessPendant"));
 				recipe.AddIngredient((ModLoader.GetMod("AAMod").ItemType("InterestingClaw")), 1);
 				recipe.AddIngredient((ModLoader.GetMod("AAMod").ItemType("Incinerite")), 30);
 				recipe.AddIngredient((ModLoader.GetMod("AAMod").ItemType("Abyssium")), 30);
@@ -487,7 +486,7 @@ namespace CraftableTreasureBags
 				recipe.AddRecipe();
 				recipe = new ModRecipe(this);
 				recipe.AddIngredient(this.GetItem("EmptyTreasureBag"));
-			//	recipe.AddIngredient(this.GetItem("MadnessPendant"));
+				recipe.AddIngredient(this.GetItem("MadnessPendant"));
 				recipe.AddIngredient((ModLoader.GetMod("AAMod").ItemType("Toadstool")), 1);
 				recipe.AddIngredient((ModLoader.GetMod("AAMod").ItemType("Mushium")), 10);
 				recipe.AddIngredient((ModLoader.GetMod("AAMod").ItemType("GlowingMushium")), 50);
@@ -498,7 +497,7 @@ namespace CraftableTreasureBags
 				recipe.AddRecipe();
 				recipe = new ModRecipe(this);
 				recipe.AddIngredient(this.GetItem("EmptyTreasureBag"));
-			//	recipe.AddIngredient(this.GetItem("MadnessPendant"));
+				recipe.AddIngredient(this.GetItem("MadnessPendant"));
 				recipe.AddIngredient((ModLoader.GetMod("AAMod").ItemType("DragonBell")), 1);
 				recipe.AddIngredient((ModLoader.GetMod("AAMod").ItemType("Incinerite")), 90);
 				recipe.AddIngredient((ModLoader.GetMod("AAMod").ItemType("BroodScale")), 80);
@@ -507,7 +506,7 @@ namespace CraftableTreasureBags
 				recipe.AddRecipe();
 				recipe = new ModRecipe(this);
 				recipe.AddIngredient(this.GetItem("EmptyTreasureBag"));
-			//	recipe.AddIngredient(this.GetItem("MadnessPendant"));
+				recipe.AddIngredient(this.GetItem("MadnessPendant"));
 				recipe.AddIngredient((ModLoader.GetMod("AAMod").ItemType("HydraChow")), 1);
 				recipe.AddIngredient((ModLoader.GetMod("AAMod").ItemType("Abyssium")), 90);
 				recipe.AddIngredient((ModLoader.GetMod("AAMod").ItemType("HydraHide")), 75);
@@ -517,7 +516,7 @@ namespace CraftableTreasureBags
 				// Subzero Serpent loot recipes start here
 				recipe = new ModRecipe(this);
 				recipe.AddIngredient(this.GetItem("EmptyTreasureBag"));
-			//	recipe.AddIngredient(this.GetItem("MadnessPendant"));
+				recipe.AddIngredient(this.GetItem("MadnessPendant"));
 				recipe.AddIngredient((ModLoader.GetMod("AAMod").ItemType("SubzeroCrystal")), 1);
 				recipe.AddIngredient((ModLoader.GetMod("AAMod").ItemType("SnowMana")), 16);
 				recipe.AddIngredient(ItemID.SnowBlock, 50);
@@ -530,7 +529,7 @@ namespace CraftableTreasureBags
 				// Desert Djinn loot recipes start here
 				recipe = new ModRecipe(this);
 				recipe.AddIngredient(this.GetItem("EmptyTreasureBag"));
-			//	recipe.AddIngredient(this.GetItem("MadnessPendant"));
+				recipe.AddIngredient(this.GetItem("MadnessPendant"));
 				recipe.AddIngredient((ModLoader.GetMod("AAMod").ItemType("DjinnLamp")), 1);
 				recipe.AddIngredient((ModLoader.GetMod("AAMod").ItemType("DesertMana")), 16);
 				recipe.AddIngredient(ItemID.SandBlock, 50);
@@ -545,7 +544,7 @@ namespace CraftableTreasureBags
 				// Sagittarius loot recipes start here
 				recipe = new ModRecipe(this);
 				recipe.AddIngredient(this.GetItem("EmptyTreasureBag"));
-			//	recipe.AddIngredient(this.GetItem("MadnessPendant"));
+				recipe.AddIngredient(this.GetItem("MadnessPendant"));
 				recipe.AddIngredient((ModLoader.GetMod("AAMod").ItemType("Lifescanner")), 1);
 				recipe.AddIngredient((ModLoader.GetMod("AAMod").ItemType("Doomite")), 45);
 				recipe.AddIngredient((ModLoader.GetMod("AAMod").ItemType("DoomiteScrap")), 25);

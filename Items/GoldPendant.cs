@@ -17,34 +17,36 @@ using static Terraria.ModLoader.ModContent;
 using System.Runtime.InteropServices;
 using ReLogic.Graphics;
 using Terraria.GameContent.UI;
-//using CraftableTreasureBags.Items;
 using Terraria.ModLoader.Exceptions;
 
 namespace CraftableTreasureBags.Items
 {
-	public class EmptyTreasureBag : ModItem
+	public class GoldPendant : ModItem
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Empty Treasure Bag");
-			Tooltip.SetDefault("Used to make boss treasure bags");
+			DisplayName.SetDefault("Gold Pendant");
+			Tooltip.SetDefault("Not Equippable"
+				+ $"\nUsed to make boss treasure bags"
+				+ $"\nUsed to make other different pendants for modded treasure bags (if the right mods are enabled)"
+				+ $"\n'The chain is too small to fit around your neck, but you can still keep it as a souvenir'");
 		}
 
 		public override void SetDefaults()
 		{
-			item.width = 32;
-			item.height = 32;
+			item.width = 26;
+			item.height = 50;
 			item.maxStack = 99;
-			item.value = 0;
+			item.value = 1000;
 			item.rare = 0;
 		}
 
 		public override void AddRecipes()
 		{
-			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(ItemID.Silk, 10);
-			recipe.AddIngredient(ItemID.BlackString);
-			recipe.AddTile(TileID.WorkBenches);
+			var recipe = new ModRecipe(mod);
+			recipe.AddIngredient(ItemID.GoldBar, 1);
+			recipe.AddIngredient(ItemID.Chain, 2);
+			recipe.AddTile(TileID.Anvils);
 			recipe.SetResult(this);
 			recipe.AddRecipe();
 		}
