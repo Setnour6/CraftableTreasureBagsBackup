@@ -97,6 +97,8 @@ namespace CraftableTreasureBags
 			//	recipe.AddRecipe();
 			//	#endregion 50,000 downloads celebration
 
+			#endregion 50,000 downloads celebration
+
 			#region Vanilla game
 
 			//recipe = new ModRecipe(this);
@@ -457,7 +459,7 @@ namespace CraftableTreasureBags
 				recipe.AddRecipe();
 				recipe = new ModRecipe(this);
 				recipe.AddIngredient(this.GetItem("EmptyTreasureBag"));
-				recipe.AddIngredient(this.GetItem("MadnessPendant"));
+			//	recipe.AddIngredient(this.GetItem("MadnessPendant"));
 				recipe.AddIngredient((ModLoader.GetMod("AAMod").ItemType("ConfusingMushroom")), 1);
 				recipe.AddIngredient((ModLoader.GetMod("AAMod").ItemType("SporeSac")), 50);
 				recipe.AddIngredient((ModLoader.GetMod("AAMod").ItemType("GlowingMushium")), 30);

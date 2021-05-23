@@ -40,6 +40,10 @@ Email: set.nour6@gmail.com
 
 ~~~~~~
 
+Version 0.15.0.1:
+- Removed all of the pendants, due to a fatal tModLoader bug that wiped out all of my game data and mod data.
+	- I was able to recover the recipe code, but not the pendant codes. Either I'll have to redo the codes for the pendants, or I'll not use them at all.
+
 Version 0.15:
 - EVENT: You can now craft a pre-hardmode treasure bag of your choice with the Celebratory Pendant, which appears upon character creation. Thank you all for 50,000 Downloads!
 	- You only have two chances, so choose wisely ;)
