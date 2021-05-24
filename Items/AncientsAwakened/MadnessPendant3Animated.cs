@@ -29,7 +29,8 @@ namespace CraftableTreasureBags.Items.AncientsAwakened
 			Tooltip.SetDefault("Not Equippable"
 				+ $"\nUsed to make Post-Moon Lord boss treasure bags from the [c/6E8CB4:Ancients Awakened] Mod"
 				+ $"\n - While favorited in your inventory, you deal 20% more damage and gain 4% of critical strike chance."
-				+ $"\n - However, you take 15% more damage, and your health regenerates slower."
+				//+ $"\n - However, you take 15% more damage, and your health is lowered by one tenth of your max life (1 ÷ 10)."
+				+ $"\n - However, you take 15% more damage, and your health is lowered by 50."
 				+ $"\n'Putting this on makes you even madder, and your soul enraged, and hurts your neck even more, so it's best to just hold on to it'");
 
 			Main.RegisterItemAnimation(item.type, new DrawAnimationVertical(8, 6));
@@ -55,12 +56,8 @@ namespace CraftableTreasureBags.Items.AncientsAwakened
 				player.rangedCrit += 4;
 				player.magicCrit += 4;
 				player.thrownCrit += 4;
-				player.lifeRegenTime -= 10;
-			}
-			else
-            {
-				//player.lifeRegenCount -= 0;
-				player.lifeRegenTime += 0;
+				//player.statLifeMax2 /= 10;
+				player.statLifeMax2 -= 50;
 			}
 		}
 

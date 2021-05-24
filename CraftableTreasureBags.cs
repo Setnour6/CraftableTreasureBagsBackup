@@ -472,6 +472,8 @@ namespace CraftableTreasureBags
 				recipe.AddIngredient((ModLoader.GetMod("AAMod").ItemType("CuriousClaw")), 1);
 				recipe.AddIngredient((ModLoader.GetMod("AAMod").ItemType("Incinerite")), 30);
 				recipe.AddIngredient((ModLoader.GetMod("AAMod").ItemType("Abyssium")), 30);
+				recipe.AddIngredient((ModLoader.GetMod("AAMod").ItemType("HydraClaw")), 50);
+				recipe.AddIngredient((ModLoader.GetMod("AAMod").ItemType("DragonClaw")), 50);
 				recipe.AddTile(TileID.DemonAltar);
 				recipe.SetResult((ModLoader.GetMod("AAMod").ItemType("GripBag")), 1);
 				recipe.AddRecipe();
@@ -481,6 +483,8 @@ namespace CraftableTreasureBags
 				recipe.AddIngredient((ModLoader.GetMod("AAMod").ItemType("InterestingClaw")), 1);
 				recipe.AddIngredient((ModLoader.GetMod("AAMod").ItemType("Incinerite")), 30);
 				recipe.AddIngredient((ModLoader.GetMod("AAMod").ItemType("Abyssium")), 30);
+				recipe.AddIngredient((ModLoader.GetMod("AAMod").ItemType("HydraClaw")), 50);
+				recipe.AddIngredient((ModLoader.GetMod("AAMod").ItemType("DragonClaw")), 50);
 				recipe.AddTile(TileID.DemonAltar);
 				recipe.SetResult((ModLoader.GetMod("AAMod").ItemType("GripBag")), 1);
 				recipe.AddRecipe();
