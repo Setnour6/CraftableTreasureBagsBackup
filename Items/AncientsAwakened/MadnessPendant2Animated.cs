@@ -21,17 +21,20 @@ using Terraria.ModLoader.Exceptions;
 
 namespace CraftableTreasureBags.Items.AncientsAwakened
 {
-	public class MadnessPendant : ModItem
+	public class MadnessPendant2Animated : ModItem
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Madness Pendant");
+			DisplayName.SetDefault("Forsaken Pendant");
 			Tooltip.SetDefault("Not Equippable"
-				+ $"\nUsed to make boss treasure bags from the [c/5F5FB4:Ancients Awakened] Mod"
-				+ $"\nCan be upgraded for use with hardmode treasure bags"
-				+ $"\n - While favorited in your inventory, you deal 5% more damage."
-				+ $"\n - However, you take 5% more damage."
-				+ $"\n'Putting this on makes you mad and hurts your neck, so it's best to just hold on to it'");
+				+ $"\nUsed to make Hardmode boss treasure bags from the [c/78C8B4:Ancients Awakened] Mod"
+				+ $"\nCan be upgraded for use with Post-Moon Lord treasure bags"
+				+ $"\n - While favorited in your inventory, you deal 10% more damage."
+				+ $"\n - However, you take 10% more damage."
+				+ $"\n'Putting this on makes you madder and hurts your neck more, so it's best to just hold on to it'");
+			
+			Main.RegisterItemAnimation(item.type, new DrawAnimationVertical(8, 6));
+
 		}
 
 		public override void SetDefaults()
@@ -40,19 +43,21 @@ namespace CraftableTreasureBags.Items.AncientsAwakened
 			item.height = 50;
 			item.maxStack = 99;
 			item.value = 1000;
-			item.rare = 0;
+			item.rare = 4;
 		}
 
 		public override void UpdateInventory(Player player)
         {
 			if (item.favorited)
             {
-				player.allDamage += 0.05f;
-				player.endurance -= 0.05f;
+				player.allDamage += 0.1f;
+				player.endurance -= 0.1f;
 			}
         }
 
 		Color[] itemNameCycleColors = new Color[]{
+			new Color(230, 200, 40),
+			new Color(45, 210, 200),
 			new Color(95, 95, 180),
 			new Color(215, 160, 175)
 		};
@@ -65,8 +70,8 @@ namespace CraftableTreasureBags.Items.AncientsAwakened
 				if (line2.mod == "Terraria" && line2.Name == "ItemName")
 				{
 					float fade = Main.GameUpdateCount % 60 / 60f;
-					int index = (int)(Main.GameUpdateCount / 60 % 2);
-					line2.overrideColor = Color.Lerp(itemNameCycleColors[index], itemNameCycleColors[(index + 1) % 2], fade);
+					int index = (int)(Main.GameUpdateCount / 60 % 4);
+					line2.overrideColor = Color.Lerp(itemNameCycleColors[index], itemNameCycleColors[(index + 1) % 4], fade);
 				}
 			}
 		}
@@ -76,9 +81,10 @@ namespace CraftableTreasureBags.Items.AncientsAwakened
 			if (ModLoader.GetMod("AAMod") != null)
             {
 				ModRecipe recipe = new ModRecipe(mod);
-				recipe.AddRecipeGroup("CraftableTreasureBags:Gold/Platinum Pendant");
-				recipe.AddIngredient((ModLoader.GetMod("AAMod").ItemType("MadnessFragment")), 4);
-				recipe.AddTile(TileID.Anvils);
+				recipe.AddIngredient(ModContent.ItemType<MadnessPendant>());
+				recipe.AddIngredient((ModLoader.GetMod("AAMod").ItemType("DragonSpirit")), 5);
+				recipe.AddIngredient((ModLoader.GetMod("AAMod").ItemType("ForsakenFragment")), 6);
+				recipe.AddTile(TileID.MythrilAnvil);
 				recipe.SetResult(this);
 				recipe.AddRecipe();
 			}

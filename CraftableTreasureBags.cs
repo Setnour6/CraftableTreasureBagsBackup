@@ -559,7 +559,7 @@ namespace CraftableTreasureBags
 				// Anubis loot recipes start here
 				recipe = new ModRecipe(this);
 				recipe.AddIngredient(this.GetItem("EmptyTreasureBag"));
-			//	recipe.AddIngredient(this.GetItem("MadnessPendant2Animated"));
+				recipe.AddIngredient(this.GetItem("MadnessPendant2Animated"));
 				recipe.AddIngredient((ModLoader.GetMod("AAMod").ItemType("Scepter")), 1);
 				recipe.AddIngredient((ModLoader.GetMod("AAMod").ItemType("ForsakenFragment")), 12);
 				recipe.AddIngredient(ItemID.AntlionMandible, 5);
@@ -572,7 +572,7 @@ namespace CraftableTreasureBags
 				// Athena loot recipes start here
 				recipe = new ModRecipe(this);
 				recipe.AddIngredient(this.GetItem("EmptyTreasureBag"));
-			//	recipe.AddIngredient(this.GetItem("MadnessPendant2Animated"));
+				recipe.AddIngredient(this.GetItem("MadnessPendant2Animated"));
 				recipe.AddIngredient((ModLoader.GetMod("AAMod").ItemType("Owl")), 1);
 				recipe.AddIngredient((ModLoader.GetMod("AAMod").ItemType("GoddessFeather")), 22);
 				recipe.AddIngredient(ItemID.Feather, 11);
@@ -590,7 +590,7 @@ namespace CraftableTreasureBags
 				// Greed loot recipes start here
 				recipe = new ModRecipe(this);
 				recipe.AddIngredient(this.GetItem("EmptyTreasureBag"));
-			//	recipe.AddIngredient(this.GetItem("MadnessPendant2Animated"));
+				recipe.AddIngredient(this.GetItem("MadnessPendant2Animated"));
 				recipe.AddIngredient((ModLoader.GetMod("AAMod").ItemType("GoldenGrub")), 1);
 				recipe.AddIngredient((ModLoader.GetMod("AAMod").ItemType("StoneShell")), 22);
 				recipe.AddIngredient(ItemID.GreedyRing);
@@ -603,7 +603,7 @@ namespace CraftableTreasureBags
 				// Rajah Rabbit loot recipes start here (Golden Carrot)
 				recipe = new ModRecipe(this);
 				recipe.AddIngredient(this.GetItem("EmptyTreasureBag"));
-			//	recipe.AddIngredient(this.GetItem("MadnessPendant2Animated"));
+				recipe.AddIngredient(this.GetItem("MadnessPendant2Animated"));
 				recipe.AddIngredient((ModLoader.GetMod("AAMod").ItemType("GoldenCarrot")), 1);
 				recipe.AddIngredient((ModLoader.GetMod("AAMod").ItemType("RajahPelt")), 32);
 				recipe.AddIngredient(ItemID.Bunny, 10);
@@ -617,7 +617,7 @@ namespace CraftableTreasureBags
 				// Rajah Rabbit loot recipes start here (Platinum Carrot)
 				recipe = new ModRecipe(this);
 				recipe.AddIngredient(this.GetItem("EmptyTreasureBag"));
-			//	recipe.AddIngredient(this.GetItem("MadnessPendant2Animated"));
+				recipe.AddIngredient(this.GetItem("MadnessPendant2Animated"));
 				recipe.AddIngredient((ModLoader.GetMod("AAMod").ItemType("PlatinumCarrot")), 1);
 				recipe.AddIngredient((ModLoader.GetMod("AAMod").ItemType("RajahPelt")), 32);
 				recipe.AddIngredient(ItemID.Bunny, 10);
@@ -633,7 +633,7 @@ namespace CraftableTreasureBags
 				// Anubis (Awakened) loot recipes start here
 				recipe = new ModRecipe(this);
 				recipe.AddIngredient(this.GetItem("EmptyTreasureBag"));
-			//	recipe.AddIngredient(this.GetItem("MadnessPendant3Animated"));
+				recipe.AddIngredient(this.GetItem("MadnessPendant3Animated"));
 				recipe.AddIngredient((ModLoader.GetMod("AAMod").ItemType("Scepter")), 1);
 				recipe.AddIngredient((ModLoader.GetMod("AAMod").ItemType("SoulFragment")), 12);
 				recipe.AddIngredient(ItemID.AntlionMandible, 10);
@@ -651,7 +651,7 @@ namespace CraftableTreasureBags
 				// Athena (Awakened) loot recipes start here
 				recipe = new ModRecipe(this);
 				recipe.AddIngredient(this.GetItem("EmptyTreasureBag"));
-			//	recipe.AddIngredient(this.GetItem("MadnessPendant3Animated"));
+				recipe.AddIngredient(this.GetItem("MadnessPendant3Animated"));
 				recipe.AddIngredient((ModLoader.GetMod("AAMod").ItemType("Owl")), 1);
 				recipe.AddIngredient((ModLoader.GetMod("AAMod").ItemType("GoddessFeather")), 22);
 				recipe.AddIngredient((ModLoader.GetMod("AAMod").ItemType("SkyCrystal")), 30);
@@ -667,7 +667,7 @@ namespace CraftableTreasureBags
 				// Greed (Awakened) loot recipes start here???
 				recipe = new ModRecipe(this);
 				recipe.AddIngredient(this.GetItem("EmptyTreasureBag"));
-			//	recipe.AddIngredient(this.GetItem("MadnessPendant3Animated"));
+				recipe.AddIngredient(this.GetItem("MadnessPendant3Animated"));
 				recipe.AddIngredient((ModLoader.GetMod("AAMod").ItemType("GoldenGrub")), 1);
 				recipe.AddIngredient((ModLoader.GetMod("AAMod").ItemType("StoneShell")), 22);
 				recipe.AddIngredient((ModLoader.GetMod("AAMod").ItemType("CovetiteOre")), 30);
@@ -680,7 +680,7 @@ namespace CraftableTreasureBags
 				// The Equinox Worms loot recipes start here
 				recipe = new ModRecipe(this);
 				recipe.AddIngredient(this.GetItem("EmptyTreasureBag"));
-			//	recipe.AddIngredient(this.GetItem("MadnessPendant3Animated"));
+				recipe.AddIngredient(this.GetItem("MadnessPendant3Animated"));
 				recipe.AddIngredient((ModLoader.GetMod("AAMod").ItemType("EquinoxWorm")), 1);
 				recipe.AddIngredient((ModLoader.GetMod("AAMod").ItemType("Stardust")), 60);
 				recipe.AddIngredient((ModLoader.GetMod("AAMod").ItemType("RadiumOre")), 30);
@@ -690,7 +690,7 @@ namespace CraftableTreasureBags
 				recipe.AddRecipe();
 				recipe = new ModRecipe(this);
 				recipe.AddIngredient(this.GetItem("EmptyTreasureBag"));
-			//	recipe.AddIngredient(this.GetItem("MadnessPendant3Animated"));
+				recipe.AddIngredient(this.GetItem("MadnessPendant3Animated"));
 				recipe.AddIngredient((ModLoader.GetMod("AAMod").ItemType("EquinoxWorm")), 1);
 				recipe.AddIngredient((ModLoader.GetMod("AAMod").ItemType("DarkEnergy")), 60);
 				recipe.AddIngredient((ModLoader.GetMod("AAMod").ItemType("DarkmatterOre")), 30);
@@ -700,7 +700,7 @@ namespace CraftableTreasureBags
 				recipe.AddRecipe();
 				recipe = new ModRecipe(this);
 				recipe.AddIngredient(this.GetItem("EmptyTreasureBag"));
-			//	recipe.AddIngredient(this.GetItem("MadnessPendant3Animated"));
+				recipe.AddIngredient(this.GetItem("MadnessPendant3Animated"));
 				recipe.AddIngredient((ModLoader.GetMod("AAMod").ItemType("EquinoxWorm")), 1);
 				recipe.AddIngredient((ModLoader.GetMod("AAMod").ItemType("Stardust")), 30);
 				recipe.AddIngredient((ModLoader.GetMod("AAMod").ItemType("RadiumOre")), 15);
@@ -714,7 +714,7 @@ namespace CraftableTreasureBags
 				// The Equinox Worms loot recipes end here
 				recipe = new ModRecipe(this);
 				recipe.AddIngredient(this.GetItem("EmptyTreasureBag"));
-			//	recipe.AddIngredient(this.GetItem("MadnessPendant3Animated"));
+				recipe.AddIngredient(this.GetItem("MadnessPendant3Animated"));
 				recipe.AddIngredient((ModLoader.GetMod("AAMod").ItemType("FlamesOfAnarchy")), 1);
 				recipe.AddIngredient((ModLoader.GetMod("AAMod").ItemType("SoulOfSmite")), 50);
 				recipe.AddIngredient((ModLoader.GetMod("AAMod").ItemType("SoulOfSpite")), 50);
@@ -726,7 +726,7 @@ namespace CraftableTreasureBags
 				// Yamata loot recipes start here
 				recipe = new ModRecipe(this);
 				recipe.AddIngredient(this.GetItem("EmptyTreasureBag"));
-			//	recipe.AddIngredient(this.GetItem("MadnessPendant3Animated"));
+				recipe.AddIngredient(this.GetItem("MadnessPendant3Animated"));
 				recipe.AddIngredient((ModLoader.GetMod("AAMod").ItemType("DreadSigil")), 1);
 				recipe.AddIngredient((ModLoader.GetMod("AAMod").ItemType("DreadScale")), 25);
 				recipe.AddIngredient((ModLoader.GetMod("AAMod").ItemType("TerrorSoul")), 10);
@@ -738,7 +738,7 @@ namespace CraftableTreasureBags
 				// Akuma loot recipes start here
 				recipe = new ModRecipe(this);
 				recipe.AddIngredient(this.GetItem("EmptyTreasureBag"));
-			//	recipe.AddIngredient(this.GetItem("MadnessPendant3Animated"));
+				recipe.AddIngredient(this.GetItem("MadnessPendant3Animated"));
 				recipe.AddIngredient((ModLoader.GetMod("AAMod").ItemType("DraconianSigil")), 1);
 				recipe.AddIngredient((ModLoader.GetMod("AAMod").ItemType("CrucibleScale")), 25);
 				recipe.AddIngredient((ModLoader.GetMod("AAMod").ItemType("SearingSpark")), 10);
@@ -749,7 +749,7 @@ namespace CraftableTreasureBags
 				// Akuma loot recipes end here
 				recipe = new ModRecipe(this);
 				recipe.AddIngredient(this.GetItem("EmptyTreasureBag"));
-			//	recipe.AddIngredient(this.GetItem("MadnessPendant3Animated"));
+				recipe.AddIngredient(this.GetItem("MadnessPendant3Animated"));
 				recipe.AddIngredient((ModLoader.GetMod("AAMod").ItemType("ZeroTesseract")), 1);
 				recipe.AddIngredient((ModLoader.GetMod("AAMod").ItemType("UnstableSingularity")), 25);
 				recipe.AddIngredient((ModLoader.GetMod("AAMod").ItemType("ApocalyptitePlate")), 25);
@@ -762,7 +762,7 @@ namespace CraftableTreasureBags
 				// Rajah Rabbit (Awakened) loot recipes start here
 				recipe = new ModRecipe(this);
 				recipe.AddIngredient(this.GetItem("EmptyTreasureBag"));
-			//	recipe.AddIngredient(this.GetItem("MadnessPendant3Animated"));
+				recipe.AddIngredient(this.GetItem("MadnessPendant3Animated"));
 				recipe.AddIngredient((ModLoader.GetMod("AAMod").ItemType("DiamondCarrot")), 1);
 				recipe.AddIngredient((ModLoader.GetMod("AAMod").ItemType("ChampionPlate")), 22);
 				recipe.AddIngredient(ItemID.Bunny, 30);
@@ -776,7 +776,7 @@ namespace CraftableTreasureBags
 				// Shen Doragon loot recipes start here
 				recipe = new ModRecipe(this);
 				recipe.AddIngredient(this.GetItem("EmptyTreasureBag"));
-			//	recipe.AddIngredient(this.GetItem("MadnessPendant3Animated"));
+				recipe.AddIngredient(this.GetItem("MadnessPendant3Animated"));
 				recipe.AddIngredient((ModLoader.GetMod("AAMod").ItemType("ChaosSigil")), 1);
 				recipe.AddIngredient((ModLoader.GetMod("AAMod").ItemType("ChaosScale")), 40);
 				recipe.AddIngredient((ModLoader.GetMod("AAMod").ItemType("Discordium")), 15);

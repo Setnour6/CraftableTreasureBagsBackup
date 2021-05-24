@@ -7,9 +7,14 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.DataStructures;
+using Terraria.Enums;
+using Terraria.GameContent;
 using Terraria.UI;
 using Terraria.ID;
+using Terraria.IO;
 using Terraria.ModLoader;
+using Terraria.GameInput;
+using Terraria.Graphics;
 using Terraria.Graphics.Effects;
 using Terraria.Graphics.Shaders;
 using Terraria.Localization;
@@ -17,21 +22,23 @@ using static Terraria.ModLoader.ModContent;
 using System.Runtime.InteropServices;
 using ReLogic.Graphics;
 using Terraria.GameContent.UI;
+using Terraria.ObjectData;
+using Terraria.Social;
 using Terraria.ModLoader.Exceptions;
 
-namespace CraftableTreasureBags.Items.AncientsAwakened
+namespace CraftableTreasureBags.Items.SpiritMod
 {
-	public class MadnessPendant : ModItem
+	public class SpiritPendant2Animated : ModItem
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Madness Pendant");
+			DisplayName.SetDefault("Spirit Pendant");
 			Tooltip.SetDefault("Not Equippable"
-				+ $"\nUsed to make boss treasure bags from the [c/5F5FB4:Ancients Awakened] Mod"
+				+ $"\nUsed to make boss treasure bags from the [c/5F5FB4:Spirit] Mod"
 				+ $"\nCan be upgraded for use with hardmode treasure bags"
-				+ $"\n - While favorited in your inventory, you deal 5% more damage."
-				+ $"\n - However, you take 5% more damage."
-				+ $"\n'Putting this on makes you mad and hurts your neck, so it's best to just hold on to it'");
+				+ $"\n - While favorited in your inventory, your critical strike chance increases by 4%, and movement speed by 6%."
+				+ $"\n - However, enemies are way more likely to target you."
+				+ $"\n'Putting this on makes you one of those discord kids, so it's best to just hold on to it'");
 		}
 
 		public override void SetDefaults()
@@ -40,21 +47,29 @@ namespace CraftableTreasureBags.Items.AncientsAwakened
 			item.height = 50;
 			item.maxStack = 99;
 			item.value = 1000;
-			item.rare = 0;
+			item.rare = 4;
 		}
 
 		public override void UpdateInventory(Player player)
         {
 			if (item.favorited)
             {
-				player.allDamage += 0.05f;
-				player.endurance -= 0.05f;
+				player.meleeCrit += 4;
+				player.rangedCrit += 4;
+				player.magicCrit += 4;
+				player.thrownCrit += 4;
+				player.moveSpeed += 0.06f;
+				player.aggro += 8000;
 			}
         }
 
 		Color[] itemNameCycleColors = new Color[]{
-			new Color(95, 95, 180),
-			new Color(215, 160, 175)
+			new Color(0, 230, 245),
+			new Color(0, 145, 235),
+			new Color(0, 185, 240),
+			new Color(150, 145, 180),
+			new Color(0, 80, 230)
+
 		};
 
 		public override void ModifyTooltips(List<TooltipLine> tooltips)
@@ -65,20 +80,21 @@ namespace CraftableTreasureBags.Items.AncientsAwakened
 				if (line2.mod == "Terraria" && line2.Name == "ItemName")
 				{
 					float fade = Main.GameUpdateCount % 60 / 60f;
-					int index = (int)(Main.GameUpdateCount / 60 % 2);
-					line2.overrideColor = Color.Lerp(itemNameCycleColors[index], itemNameCycleColors[(index + 1) % 2], fade);
+					int index = (int)(Main.GameUpdateCount / 60 % 5);
+					line2.overrideColor = Color.Lerp(itemNameCycleColors[index], itemNameCycleColors[(index + 1) % 5], fade);
 				}
 			}
 		}
 
 		public override void AddRecipes()
 		{
-			if (ModLoader.GetMod("AAMod") != null)
+			if (ModLoader.GetMod("SpiritMod") != null)
             {
 				ModRecipe recipe = new ModRecipe(mod);
 				recipe.AddRecipeGroup("CraftableTreasureBags:Gold/Platinum Pendant");
-				recipe.AddIngredient((ModLoader.GetMod("AAMod").ItemType("MadnessFragment")), 4);
-				recipe.AddTile(TileID.Anvils);
+				recipe.AddIngredient((ModLoader.GetMod("SpiritMod").ItemType("SoulShred")), 5);
+				recipe.AddIngredient((ModLoader.GetMod("SpiritMod").ItemType("SpiritBar")), 2);
+				recipe.AddTile(TileID.MythrilAnvil);
 				recipe.SetResult(this);
 				recipe.AddRecipe();
 			}
