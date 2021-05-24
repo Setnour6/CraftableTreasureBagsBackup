@@ -27,7 +27,7 @@ namespace CraftableTreasureBags.Items.AncientsAwakened
 		{
 			DisplayName.SetDefault("Forsaken Pendant");
 			Tooltip.SetDefault("Not Equippable"
-				+ $"\nUsed to make Hardmode boss treasure bags from the [c/78C8B4:Ancients Awakened] Mod"
+				+ $"\nUsed to make Hardmode boss treasure bags from the [c/6E8CB4:Ancients Awakened] Mod"
 				+ $"\nCan be upgraded for use with Post-Moon Lord treasure bags"
 				+ $"\n - While favorited in your inventory, you deal 10% more damage."
 				+ $"\n - However, you take 10% more damage."

@@ -40,9 +40,11 @@ Email: set.nour6@gmail.com
 
 ~~~~~~
 
+EVENT: You can now craft a pre-hardmode treasure bag of your choice with the Celebratory Pendant, which appears upon character creation.
+
 Version 0.15.1:
-- Reworking some things, due to a fatal tModLoader bug that wiped out all of my game data and mod data.
-	- I was able to recover the recipe code, but not the pendant codes. I'm trying to redo the pendant codes as best as I can, hopefully matching them up with that they used to look like.
+- Reworked all pendants except for the gold/platinum pendant, due to a fatal tModLoader bug that wiped out all of my game data and mod data.
+	- I was able to recover the recipe code, but not the pendant codes. I was trying to redo the pendant codes as best as I could, hopefully matching them up with that they used to look like, and improving them.
 
 Version 0.15:
 - EVENT: You can now craft a pre-hardmode treasure bag of your choice with the Celebratory Pendant, which appears upon character creation. Thank you all for 50,000 Downloads!
@@ -51,13 +53,5 @@ Version 0.15:
 - All Vanilla bosses now require Gold/Platinum pendants.
 - Added Bismite Pendant and Spirit Pendant, which can only be obtained if the Spirit Mod is Enabled.
 - Changed all of the recipes for the Spirit Mod boss treasure bags. (Removing weapon loot to craft, adding herbs and other items to craft with, pendants as well, etc.)
-
-Version 0.14:
-- Changed the maximum stack of Empty Treasure Bags from 999 to 99.
-- Empty Treasure Bags now require black string to be crafted (let me know if you do not like this change).
-- Duke Fishron and Moon Lord treasure bags now require moonglow to craft. The Moon Lord Treasure Bag additionally requires blinkroot.
-- Added five new items: Gold Pendant, Platinum Pendant, Madness Pendant, Forsaken Pendant, and Soulful Pendant, which can only be crafted if the Ancients Awakened mod is enabled.
-	-  They will be used to make other pendants to make treasure bags from the Ancients Awakened mod.
-- Changed all of the recipes for the Ancients Awakened boss treasure bags. (Removing weapon loot to craft, adding herbs to craft with, adding blocks and materials to craft with, etc. and the pendants too.)
 
 All other versions are listed through the homepage (the button/link goes to the Github releases and shows the changelog for each release)

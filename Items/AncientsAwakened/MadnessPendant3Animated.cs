@@ -27,10 +27,10 @@ namespace CraftableTreasureBags.Items.AncientsAwakened
 		{
 			DisplayName.SetDefault("Soulful Pendant");
 			Tooltip.SetDefault("Not Equippable"
-				+ $"\nUsed to make Post-Moon Lord boss treasure bags from the [c/78C8B4:Ancients Awakened] Mod"
-				+ $"\n - While favorited in your inventory, you deal 20% more damage."
+				+ $"\nUsed to make Post-Moon Lord boss treasure bags from the [c/6E8CB4:Ancients Awakened] Mod"
+				+ $"\n - While favorited in your inventory, you deal 20% more damage and gain 4% of critical strike chance."
 				+ $"\n - However, you take 15% more damage, and your health regenerates slower."
-				+ $"\n'Putting this on makes you madder and hurts your neck more, so it's best to just hold on to it'");
+				+ $"\n'Putting this on makes you even madder, and your soul enraged, and hurts your neck even more, so it's best to just hold on to it'");
 
 			Main.RegisterItemAnimation(item.type, new DrawAnimationVertical(8, 6));
 
@@ -55,8 +55,12 @@ namespace CraftableTreasureBags.Items.AncientsAwakened
 				player.rangedCrit += 4;
 				player.magicCrit += 4;
 				player.thrownCrit += 4;
-				player.lifeRegenCount += 10;
-				player.lifeRegenTime += 10;
+				player.lifeRegenTime -= 10;
+			}
+			else
+            {
+				//player.lifeRegenCount -= 0;
+				player.lifeRegenTime += 0;
 			}
 		}
 

@@ -525,6 +525,7 @@ namespace CraftableTreasureBags
 				recipe.AddIngredient((ModLoader.GetMod("AAMod").ItemType("IndigoIce")), 10);
 				recipe.AddTile(TileID.DemonAltar);
 				recipe.SetResult((ModLoader.GetMod("AAMod").ItemType("SerpentBag")), 1);
+				recipe.AddRecipe();
 				// Subzero Serpent loot recipes end here
 				// Desert Djinn loot recipes start here
 				recipe = new ModRecipe(this);
@@ -847,7 +848,7 @@ namespace CraftableTreasureBags
 				// Scarabeus loot recipes start here 
 				recipe = new ModRecipe(this);
 				recipe.AddIngredient(this.GetItem("EmptyTreasureBag"));
-			//	recipe.AddIngredient(this.GetItem("BismitePendant"));
+				recipe.AddIngredient(this.GetItem("BismitePendant"));
 				recipe.AddIngredient((ModLoader.GetMod("SpiritMod").ItemType("ScarabIdol")), 1);
 				recipe.AddIngredient((ModLoader.GetMod("SpiritMod").ItemType("Chitin")), 30);
 				recipe.AddIngredient(ItemID.AntlionMandible, 15);
@@ -859,7 +860,7 @@ namespace CraftableTreasureBags
 				// Moon Jelly Wizard loot recipes start here
 				recipe = new ModRecipe(this);
 				recipe.AddIngredient(this.GetItem("EmptyTreasureBag"));
-			//	recipe.AddIngredient(this.GetItem("BismitePendant"));
+				recipe.AddIngredient(this.GetItem("BismitePendant"));
 				recipe.AddIngredient((ModLoader.GetMod("SpiritMod").ItemType("DreamlightJellyItem")), 1);
 				recipe.AddIngredient((ModLoader.GetMod("SpiritMod").ItemType("MoonJelly")), 10);
 				recipe.AddIngredient(ItemID.Moonglow, 10);
@@ -871,7 +872,7 @@ namespace CraftableTreasureBags
 				// Vinewrath Bane loot recipes start here
 				recipe = new ModRecipe(this);
 				recipe.AddIngredient(this.GetItem("EmptyTreasureBag"));
-			//	recipe.AddIngredient(this.GetItem("BismitePendant"));
+				recipe.AddIngredient(this.GetItem("BismitePendant"));
 				recipe.AddIngredient((ModLoader.GetMod("SpiritMod").ItemType("ReachBossSummon")), 1);
 				recipe.AddIngredient(ItemID.Vine, 50);
 				recipe.AddIngredient((ModLoader.GetMod("SpiritMod").ItemType("EnchantedLeaf")), 20);
@@ -881,7 +882,7 @@ namespace CraftableTreasureBags
 				// Vinewrath Bane loot recipes end here
 				recipe = new ModRecipe(this);
 				recipe.AddIngredient(this.GetItem("EmptyTreasureBag"));
-			//	recipe.AddIngredient(this.GetItem("BismitePendant"));
+				recipe.AddIngredient(this.GetItem("BismitePendant"));
 				recipe.AddIngredient((ModLoader.GetMod("SpiritMod").ItemType("JewelCrown")), 1);
 				recipe.AddIngredient(ItemID.Feather, 10);
 				recipe.AddIngredient(ItemID.Bone, 50);
@@ -890,7 +891,7 @@ namespace CraftableTreasureBags
 				recipe.AddRecipe();
 				recipe = new ModRecipe(this);
 				recipe.AddIngredient(this.GetItem("EmptyTreasureBag"));
-			//	recipe.AddIngredient(this.GetItem("BismitePendant"));
+				recipe.AddIngredient(this.GetItem("BismitePendant"));
 				recipe.AddIngredient((ModLoader.GetMod("SpiritMod").ItemType("StarWormSummon")), 1);
 				recipe.AddIngredient((ModLoader.GetMod("SpiritMod").ItemType("AsteroidBlock")), 20);
 				recipe.AddIngredient((ModLoader.GetMod("SpiritMod").ItemType("CosmiliteShard")), 8);
@@ -902,7 +903,7 @@ namespace CraftableTreasureBags
 				// Infernus loot recipes start here
 				recipe = new ModRecipe(this);
 				recipe.AddIngredient(this.GetItem("EmptyTreasureBag"));
-			//	recipe.AddIngredient(this.GetItem("SpiritPendant2Animated"));
+				recipe.AddIngredient(this.GetItem("SpiritPendant2Animated"));
 				recipe.AddIngredient((ModLoader.GetMod("SpiritMod").ItemType("CursedCloth")), 1);
 				recipe.AddIngredient((ModLoader.GetMod("SpiritMod").ItemType("InfernalAppendage")), 30);
 				recipe.AddIngredient(ItemID.Fireblossom, 10);
@@ -916,7 +917,7 @@ namespace CraftableTreasureBags
 				// Dusking loot recipes start here
 				recipe = new ModRecipe(this);
 				recipe.AddIngredient(this.GetItem("EmptyTreasureBag"));
-			//	recipe.AddIngredient(this.GetItem("SpiritPendant2Animated"));
+				recipe.AddIngredient(this.GetItem("SpiritPendant2Animated"));
 				recipe.AddIngredient((ModLoader.GetMod("SpiritMod").ItemType("DuskCrown")), 1);
 				recipe.AddIngredient((ModLoader.GetMod("SpiritMod").ItemType("DuskStone")), 30);
 				recipe.AddIngredient((ModLoader.GetMod("SpiritMod").ItemType("MagalaScale")), 10);
@@ -930,7 +931,7 @@ namespace CraftableTreasureBags
 				// Atlas loot recipes start here
 				recipe = new ModRecipe(this);
 				recipe.AddIngredient(this.GetItem("EmptyTreasureBag"));
-			//	recipe.AddIngredient(this.GetItem("SpiritPendant2Animated"));
+				recipe.AddIngredient(this.GetItem("SpiritPendant2Animated"));
 				recipe.AddIngredient((ModLoader.GetMod("SpiritMod").ItemType("StoneSkin")), 1);
 				recipe.AddIngredient((ModLoader.GetMod("SpiritMod").ItemType("ArcaneGeyser")), 38);
 				recipe.AddIngredient((ModLoader.GetMod("SpiritMod").ItemType("SpiritBar")), 20);

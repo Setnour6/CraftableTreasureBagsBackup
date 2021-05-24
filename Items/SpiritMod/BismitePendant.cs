@@ -34,7 +34,7 @@ namespace CraftableTreasureBags.Items.SpiritMod
 		{
 			DisplayName.SetDefault("Bismite Pendant");
 			Tooltip.SetDefault("Not Equippable"
-				+ $"\nUsed to make boss treasure bags from the [c/5F5FB4:Spirit] Mod"
+				+ $"\nUsed to make boss treasure bags from the [c/6E8CB4:Spirit] Mod"
 				+ $"\nCan be upgraded for use with hardmode treasure bags"
 				+ $"\n - While favorited in your inventory, your critical strike chance increases by 2%, and movement speed by 3%."
 				+ $"\n - However, enemies are more likely to target you."
@@ -88,7 +88,7 @@ namespace CraftableTreasureBags.Items.SpiritMod
             {
 				ModRecipe recipe = new ModRecipe(mod);
 				recipe.AddRecipeGroup("CraftableTreasureBags:Gold/Platinum Pendant");
-				recipe.AddIngredient((ModLoader.GetMod("SpiritMod").ItemType("BismiteFragment")), 4);
+				recipe.AddIngredient((ModLoader.GetMod("SpiritMod").ItemType("BismiteCrystal")), 4);
 				recipe.AddTile(TileID.Anvils);
 				recipe.SetResult(this);
 				recipe.AddRecipe();

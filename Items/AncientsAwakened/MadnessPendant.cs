@@ -27,7 +27,7 @@ namespace CraftableTreasureBags.Items.AncientsAwakened
 		{
 			DisplayName.SetDefault("Madness Pendant");
 			Tooltip.SetDefault("Not Equippable"
-				+ $"\nUsed to make boss treasure bags from the [c/5F5FB4:Ancients Awakened] Mod"
+				+ $"\nUsed to make boss treasure bags from the [c/6E8CB4:Ancients Awakened] Mod"
 				+ $"\nCan be upgraded for use with hardmode treasure bags"
 				+ $"\n - While favorited in your inventory, you deal 5% more damage."
 				+ $"\n - However, you take 5% more damage."

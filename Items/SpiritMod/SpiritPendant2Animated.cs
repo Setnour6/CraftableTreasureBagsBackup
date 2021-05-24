@@ -34,11 +34,14 @@ namespace CraftableTreasureBags.Items.SpiritMod
 		{
 			DisplayName.SetDefault("Spirit Pendant");
 			Tooltip.SetDefault("Not Equippable"
-				+ $"\nUsed to make boss treasure bags from the [c/5F5FB4:Spirit] Mod"
+				+ $"\nUsed to make boss treasure bags from the [c/6E8CB4:Spirit] Mod"
 				+ $"\nCan be upgraded for use with hardmode treasure bags"
 				+ $"\n - While favorited in your inventory, your critical strike chance increases by 4%, and movement speed by 6%."
 				+ $"\n - However, enemies are way more likely to target you."
-				+ $"\n'Putting this on makes you one of those discord kids, so it's best to just hold on to it'");
+				+ $"\n'Putting this on makes your own spirit buzz, so it's best to just hold on to it'");
+
+			Main.RegisterItemAnimation(item.type, new DrawAnimationVertical(8, 6));
+
 		}
 
 		public override void SetDefaults()
@@ -61,7 +64,11 @@ namespace CraftableTreasureBags.Items.SpiritMod
 				player.moveSpeed += 0.06f;
 				player.aggro += 8000;
 			}
-        }
+			else
+            {
+				player.aggro += 0;
+			}
+		}
 
 		Color[] itemNameCycleColors = new Color[]{
 			new Color(0, 230, 245),
@@ -91,7 +98,7 @@ namespace CraftableTreasureBags.Items.SpiritMod
 			if (ModLoader.GetMod("SpiritMod") != null)
             {
 				ModRecipe recipe = new ModRecipe(mod);
-				recipe.AddRecipeGroup("CraftableTreasureBags:Gold/Platinum Pendant");
+				recipe.AddIngredient(ModContent.ItemType<BismitePendant>());
 				recipe.AddIngredient((ModLoader.GetMod("SpiritMod").ItemType("SoulShred")), 5);
 				recipe.AddIngredient((ModLoader.GetMod("SpiritMod").ItemType("SpiritBar")), 2);
 				recipe.AddTile(TileID.MythrilAnvil);
