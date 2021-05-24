@@ -1,4 +1,4 @@
-displayName = Craftable Treasure Bags (Read Desc.)
+displayName = Craftable Treasure Bags
 author = Setnour6
 version = 0.15.1
 homepage = https://github.com/Setnour6/CraftableTreasureBags
