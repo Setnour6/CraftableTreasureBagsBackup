@@ -98,7 +98,7 @@ namespace CraftableTreasureBags
 
 			#endregion 50,000 downloads celebration
 
-			#region Vanilla game
+			#region Vanilla boss treasure bags
 
 			recipe = new ModRecipe(this);
 			//ModRecipe recipe = new ModRecipe(this);
@@ -379,7 +379,7 @@ namespace CraftableTreasureBags
 			recipe.SetResult(ItemID.MoonLordBossBag);
 			recipe.AddRecipe();
 
-			#endregion Vanilla game
+			#endregion Vanilla boss treasure bags
 
 			// Modded Treasure Bags: AlchemistNPC
 			if (ModLoader.GetMod("AlchemistNPC") != null)
@@ -483,8 +483,8 @@ namespace CraftableTreasureBags
 				recipe.AddIngredient((ModLoader.GetMod("AAMod").ItemType("InterestingClaw")), 1);
 				recipe.AddIngredient((ModLoader.GetMod("AAMod").ItemType("Incinerite")), 30);
 				recipe.AddIngredient((ModLoader.GetMod("AAMod").ItemType("Abyssium")), 30);
-				recipe.AddIngredient((ModLoader.GetMod("AAMod").ItemType("HydraClaw")), 50);
-				recipe.AddIngredient((ModLoader.GetMod("AAMod").ItemType("DragonClaw")), 50);
+				recipe.AddIngredient((ModLoader.GetMod("AAMod").ItemType("HydraClaw")), 20);
+				recipe.AddIngredient((ModLoader.GetMod("AAMod").ItemType("DragonClaw")), 20);
 				recipe.AddTile(TileID.DemonAltar);
 				recipe.SetResult((ModLoader.GetMod("AAMod").ItemType("GripBag")), 1);
 				recipe.AddRecipe();
@@ -505,6 +505,7 @@ namespace CraftableTreasureBags
 				recipe.AddIngredient((ModLoader.GetMod("AAMod").ItemType("DragonBell")), 1);
 				recipe.AddIngredient((ModLoader.GetMod("AAMod").ItemType("Incinerite")), 90);
 				recipe.AddIngredient((ModLoader.GetMod("AAMod").ItemType("BroodScale")), 80);
+				recipe.AddIngredient((ModLoader.GetMod("AAMod").ItemType("DragonClaw")), 50);
 				recipe.AddTile(TileID.DemonAltar);
 				recipe.SetResult((ModLoader.GetMod("AAMod").ItemType("BroodBag")), 1);
 				recipe.AddRecipe();
@@ -514,6 +515,7 @@ namespace CraftableTreasureBags
 				recipe.AddIngredient((ModLoader.GetMod("AAMod").ItemType("HydraChow")), 1);
 				recipe.AddIngredient((ModLoader.GetMod("AAMod").ItemType("Abyssium")), 90);
 				recipe.AddIngredient((ModLoader.GetMod("AAMod").ItemType("HydraHide")), 75);
+				recipe.AddIngredient((ModLoader.GetMod("AAMod").ItemType("HydraClaw")), 50);
 				recipe.AddTile(TileID.DemonAltar);
 				recipe.SetResult((ModLoader.GetMod("AAMod").ItemType("HydraBag")), 1);
 				recipe.AddRecipe();
