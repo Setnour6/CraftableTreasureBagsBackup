@@ -503,7 +503,7 @@ namespace CraftableTreasureBags
 				recipe.AddIngredient(this.GetItem("EmptyTreasureBag"));
 				recipe.AddIngredient(this.GetItem("MadnessPendant"));
 				recipe.AddIngredient((ModLoader.GetMod("AAMod").ItemType("DragonBell")), 1);
-				recipe.AddIngredient((ModLoader.GetMod("AAMod").ItemType("Incinerite")), 90);
+				recipe.AddIngredient((ModLoader.GetMod("AAMod").ItemType("Incinerite")), 100);
 				recipe.AddIngredient((ModLoader.GetMod("AAMod").ItemType("BroodScale")), 80);
 				recipe.AddIngredient((ModLoader.GetMod("AAMod").ItemType("DragonClaw")), 50);
 				recipe.AddTile(TileID.DemonAltar);
@@ -513,8 +513,8 @@ namespace CraftableTreasureBags
 				recipe.AddIngredient(this.GetItem("EmptyTreasureBag"));
 				recipe.AddIngredient(this.GetItem("MadnessPendant"));
 				recipe.AddIngredient((ModLoader.GetMod("AAMod").ItemType("HydraChow")), 1);
-				recipe.AddIngredient((ModLoader.GetMod("AAMod").ItemType("Abyssium")), 90);
-				recipe.AddIngredient((ModLoader.GetMod("AAMod").ItemType("HydraHide")), 75);
+				recipe.AddIngredient((ModLoader.GetMod("AAMod").ItemType("Abyssium")), 100);
+				recipe.AddIngredient((ModLoader.GetMod("AAMod").ItemType("HydraHide")), 80);
 				recipe.AddIngredient((ModLoader.GetMod("AAMod").ItemType("HydraClaw")), 50);
 				recipe.AddTile(TileID.DemonAltar);
 				recipe.SetResult((ModLoader.GetMod("AAMod").ItemType("HydraBag")), 1);
