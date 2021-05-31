@@ -310,6 +310,10 @@ namespace CraftableTreasureBags
 			{
 				recipe.AddIngredient((ModLoader.GetMod("Fargowiltas").ItemType("PlanterasFruit")), 1);
 			}
+			else if (ModLoader.GetMod("AAMod") != null)
+			{
+				recipe.AddIngredient((ModLoader.GetMod("AAMod").ItemType("PlanteraFlower")), 1);
+			}
 			recipe.AddIngredient(ItemID.TempleKey, 1);
 			recipe.AddIngredient(ItemID.PygmyStaff, 1);
 			recipe.AddIngredient(ItemID.PygmyNecklace, 1);
@@ -444,6 +448,7 @@ namespace CraftableTreasureBags
 				recipe.AddRecipe();
 			}
 			// Modded Treasure Bags: Ancients Awakened || AAMod
+			#region Ancients Awakened boss treasure bags
 			if (ModLoader.GetMod("AAMod") != null)
 			{
 				recipe = new ModRecipe(this);
@@ -795,6 +800,8 @@ namespace CraftableTreasureBags
 				recipe.AddRecipe();
 				// Shen Doragon loot recipes end here
 			}
+			#endregion Ancients Awakened boss treasure bags
+
 			// Modded Treasure Bags: Azercadmium
 			if (ModLoader.GetMod("Azercadmium") != null)
 			{
@@ -849,6 +856,8 @@ namespace CraftableTreasureBags
 				recipe.AddRecipe();
 			}
 			// Modded Treasure Bags: Spirit Mod
+			#region Spirit Mod boss treasure bags
+
 			if (ModLoader.GetMod("SpiritMod") != null)
 			{
 				// Scarabeus loot recipes start here 
@@ -949,6 +958,8 @@ namespace CraftableTreasureBags
 				recipe.AddRecipe();
 				// Atlas loot recipes end here
 			}
+			#endregion Spirit Mod boss treasure bags
+
 			// Modded Treasure Bags: Thorium Mod
 			if (ModLoader.GetMod("ThoriumMod") != null)
 			{

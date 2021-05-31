@@ -43,8 +43,10 @@ Email: set.nour6@gmail.com
 EVENT: You can now craft a pre-hardmode treasure bag of your choice with the Celebratory Pendant, which appears upon character creation.
 
 Version 0.15.1:
-- Reworked all pendants except for the gold/platinum pendant, due to a fatal tModLoader bug that wiped out all of my game data and mod data.
+- Reworked all pendants, due to a fatal tModLoader bug that wiped out all of my game data and mod data.
 	- I was able to recover the recipe code, but not the pendant codes. I was trying to redo the pendant codes as best as I could, hopefully matching them up with that they used to look like, and improving them.
+- Made some minor adjustments to some of the recipes for the Ancients Awakened Mod.
+- Plantera's Treasure Bag now requires a Plantera Flower (If the Ancients Awakened Mod is enabled) 
 
 Version 0.15:
 - EVENT: You can now craft a pre-hardmode treasure bag of your choice with the Celebratory Pendant, which appears upon character creation. Thank you all for 50,000 Downloads!
