@@ -34,8 +34,7 @@ namespace CraftableTreasureBags.Items.SpiritMod
 		{
 			DisplayName.SetDefault("Spirit Pendant");
 			Tooltip.SetDefault("Not Equippable"
-				+ $"\nUsed to make boss treasure bags from the [c/6E8CB4:Spirit] Mod"
-				+ $"\nCan be upgraded for use with hardmode treasure bags"
+				+ $"\nUsed to make Hardmode boss treasure bags from the [c/6E8CB4:Spirit] Mod"
 				+ $"\n - While favorited in your inventory, your critical strike chance increases by 4%, and movement speed by 6%."
 				+ $"\n - However, enemies are way more likely to target you."
 				+ $"\n'Putting this on makes your own spirit buzz, so it's best to just hold on to it'");

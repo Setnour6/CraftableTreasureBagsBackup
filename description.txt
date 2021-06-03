@@ -42,6 +42,10 @@ Email: set.nour6@gmail.com
 
 EVENT: You can now craft a pre-hardmode treasure bag of your choice with the Celebratory Pendant, which appears upon character creation.
 
+Version 0.16:
+- Fixed an issue where the Spirit Pendant would have some of the same tooltips as the Bismite Pendant (Spirit Mod)
+- Added Danger Pendant and Abyssal Pendant, which can only be obtained if the Thorium Mod is enabled.
+
 Version 0.15.1:
 - Reworked all pendants, due to a fatal tModLoader bug that wiped out all of my game data and mod data.
 	- I was able to recover the recipe code, but not the pendant codes. I was trying to redo the pendant codes as best as I could, hopefully matching them up with that they used to look like, and improving them.

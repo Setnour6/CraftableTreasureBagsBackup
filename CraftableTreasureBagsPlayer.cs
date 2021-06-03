@@ -11,6 +11,18 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ModLoader.IO;
 using CraftableTreasureBags.Items;
+using System.ComponentModel;
+using Terraria.UI;
+using Terraria.Enums;
+using Terraria.Graphics.Effects;
+using Terraria.Graphics.Shaders;
+using Terraria.Localization;
+using static Terraria.ModLoader.ModContent;
+using System.Runtime.InteropServices;
+using ReLogic.Graphics;
+using Terraria.GameContent;
+using Terraria.GameContent.UI;
+using Terraria.ModLoader.Exceptions;
 
 namespace CraftableTreasureBags
 {

@@ -961,92 +961,63 @@ namespace CraftableTreasureBags
 			#endregion Spirit Mod boss treasure bags
 
 			// Modded Treasure Bags: Thorium Mod
+			#region Thorium Mod boss treasure bags
+
 			if (ModLoader.GetMod("ThoriumMod") != null)
 			{
 				recipe = new ModRecipe(this);
 				recipe.AddIngredient(this.GetItem("EmptyTreasureBag"));
+				recipe.AddIngredient(this.GetItem("DangerPendant"));
 				recipe.AddIngredient((ModLoader.GetMod("ThoriumMod").ItemType("StrongFlareGun")), 1);
 				recipe.AddIngredient((ModLoader.GetMod("ThoriumMod").ItemType("StormFlare")), 1);
 				recipe.AddIngredient((ModLoader.GetMod("ThoriumMod").ItemType("SandStone")), 18);
+				recipe.AddIngredient(ItemID.SandBlock, 20);
 				recipe.AddTile(TileID.DemonAltar);
 				recipe.SetResult((ModLoader.GetMod("ThoriumMod").ItemType("ThunderBirdBag")), 1);
 				recipe.AddRecipe();
 				recipe = new ModRecipe(this);
 				recipe.AddIngredient(this.GetItem("EmptyTreasureBag"));
+				recipe.AddIngredient(this.GetItem("DangerPendant"));
 				recipe.AddIngredient((ModLoader.GetMod("ThoriumMod").ItemType("JellyfishResonator")), 1);
-				recipe.AddIngredient(ItemID.PinkGel, 10);
+				recipe.AddIngredient(ItemID.PinkGel, 30);
+				recipe.AddIngredient(ItemID.Glowstick, 20);
 				recipe.AddIngredient((ModLoader.GetMod("ThoriumMod").ItemType("QueensGlowstick")), 1);
 				recipe.AddTile(TileID.DemonAltar);
 				recipe.SetResult((ModLoader.GetMod("ThoriumMod").ItemType("JellyFishBag")), 1);
 				recipe.AddRecipe();
 				recipe = new ModRecipe(this);
 				recipe.AddIngredient(this.GetItem("EmptyTreasureBag"));
+				recipe.AddIngredient(this.GetItem("DangerPendant"));
 				recipe.AddIngredient((ModLoader.GetMod("ThoriumMod").ItemType("UnholyShards")), 10);
 				recipe.AddIngredient((ModLoader.GetMod("ThoriumMod").ItemType("GrimPointer")), 1);
+				recipe.AddIngredient((ModLoader.GetMod("ThoriumMod").ItemType("SmoothCoal")), 10);
 				recipe.AddTile(TileID.DemonAltar);
 				recipe.SetResult((ModLoader.GetMod("ThoriumMod").ItemType("CountBag")), 1);
 				recipe.AddRecipe();
 				recipe = new ModRecipe(this);
 				recipe.AddIngredient(this.GetItem("EmptyTreasureBag"));
+				recipe.AddIngredient(this.GetItem("DangerPendant"));
 				recipe.AddIngredient((ModLoader.GetMod("ThoriumMod").ItemType("UnstableCore")), 1);
-				recipe.AddIngredient(ItemID.Granite, 100);
+				recipe.AddIngredient(ItemID.Granite, 125);
 				recipe.AddTile(TileID.DemonAltar);
 				recipe.SetResult((ModLoader.GetMod("ThoriumMod").ItemType("GraniteBag")), 1);
 				recipe.AddRecipe();
 				recipe = new ModRecipe(this);
 				recipe.AddIngredient(this.GetItem("EmptyTreasureBag"));
+				recipe.AddIngredient(this.GetItem("DangerPendant"));
 				recipe.AddIngredient((ModLoader.GetMod("ThoriumMod").ItemType("AncientBlade")), 1);
-				recipe.AddIngredient(ItemID.Marble, 100);
+				recipe.AddIngredient(ItemID.Marble, 125);
 				recipe.AddTile(TileID.DemonAltar);
 				recipe.SetResult((ModLoader.GetMod("ThoriumMod").ItemType("HeroBag")), 1);
 				recipe.AddRecipe();
 				// Star Scouter loot recipes start here
 				recipe = new ModRecipe(this);
 				recipe.AddIngredient(this.GetItem("EmptyTreasureBag"));
+				recipe.AddIngredient(this.GetItem("DangerPendant"));
 				recipe.AddIngredient((ModLoader.GetMod("ThoriumMod").ItemType("StarCaller")), 1);
-				recipe.AddIngredient((ModLoader.GetMod("ThoriumMod").ItemType("StarTrail")), 1);
-				recipe.AddTile(TileID.DemonAltar);
-				recipe.SetResult((ModLoader.GetMod("ThoriumMod").ItemType("ScouterBag")), 1);
-				recipe.AddRecipe();
-				recipe = new ModRecipe(this);
-				recipe.AddIngredient(this.GetItem("EmptyTreasureBag"));
-				recipe.AddIngredient((ModLoader.GetMod("ThoriumMod").ItemType("StarCaller")), 1);
-				recipe.AddIngredient((ModLoader.GetMod("ThoriumMod").ItemType("GaussSpark")), 1);
-				recipe.AddTile(TileID.DemonAltar);
-				recipe.SetResult((ModLoader.GetMod("ThoriumMod").ItemType("ScouterBag")), 1);
-				recipe.AddRecipe();
-				recipe = new ModRecipe(this);
-				recipe.AddIngredient(this.GetItem("EmptyTreasureBag"));
-				recipe.AddIngredient((ModLoader.GetMod("ThoriumMod").ItemType("StarCaller")), 1);
-				recipe.AddIngredient((ModLoader.GetMod("ThoriumMod").ItemType("HitScanner")), 1);
-				recipe.AddTile(TileID.DemonAltar);
-				recipe.SetResult((ModLoader.GetMod("ThoriumMod").ItemType("ScouterBag")), 1);
-				recipe.AddRecipe();
-				recipe = new ModRecipe(this);
-				recipe.AddIngredient(this.GetItem("EmptyTreasureBag"));
-				recipe.AddIngredient((ModLoader.GetMod("ThoriumMod").ItemType("StarCaller")), 1);
-				recipe.AddIngredient((ModLoader.GetMod("ThoriumMod").ItemType("DistressCaller")), 1);
-				recipe.AddTile(TileID.DemonAltar);
-				recipe.SetResult((ModLoader.GetMod("ThoriumMod").ItemType("ScouterBag")), 1);
-				recipe.AddRecipe();
-				recipe = new ModRecipe(this);
-				recipe.AddIngredient(this.GetItem("EmptyTreasureBag"));
-				recipe.AddIngredient((ModLoader.GetMod("ThoriumMod").ItemType("StarCaller")), 1);
-				recipe.AddIngredient((ModLoader.GetMod("ThoriumMod").ItemType("GaussKnife")), 1);
-				recipe.AddTile(TileID.DemonAltar);
-				recipe.SetResult((ModLoader.GetMod("ThoriumMod").ItemType("ScouterBag")), 1);
-				recipe.AddRecipe();
-				recipe = new ModRecipe(this);
-				recipe.AddIngredient(this.GetItem("EmptyTreasureBag"));
-				recipe.AddIngredient((ModLoader.GetMod("ThoriumMod").ItemType("StarCaller")), 1);
-				recipe.AddIngredient((ModLoader.GetMod("ThoriumMod").ItemType("StarRod")), 1);
-				recipe.AddTile(TileID.DemonAltar);
-				recipe.SetResult((ModLoader.GetMod("ThoriumMod").ItemType("ScouterBag")), 1);
-				recipe.AddRecipe();
-				recipe = new ModRecipe(this);
-				recipe.AddIngredient(this.GetItem("EmptyTreasureBag"));
-				recipe.AddIngredient((ModLoader.GetMod("ThoriumMod").ItemType("StarCaller")), 1);
-				recipe.AddIngredient((ModLoader.GetMod("ThoriumMod").ItemType("Roboboe")), 1);
+				recipe.AddIngredient((ModLoader.GetMod("ThoriumMod").ItemType("Zapper")), 1);
+				recipe.AddIngredient(ItemID.Cloud, 30);
+				recipe.AddIngredient(ItemID.RainCloud, 10);
 				recipe.AddTile(TileID.DemonAltar);
 				recipe.SetResult((ModLoader.GetMod("ThoriumMod").ItemType("ScouterBag")), 1);
 				recipe.AddRecipe();
@@ -1056,7 +1027,7 @@ namespace CraftableTreasureBags
 				recipe = new ModRecipe(this);
 				recipe.AddIngredient(this.GetItem("EmptyTreasureBag"));
 				recipe.AddIngredient((ModLoader.GetMod("ThoriumMod").ItemType("StriderTear")), 1);
-				recipe.AddIngredient((ModLoader.GetMod("ThoriumMod").ItemType("GlacialSting")), 1);
+				recipe.AddIngredient(ItemID.IceBlock, 50);
 				recipe.AddTile(TileID.DemonAltar);
 				recipe.SetResult((ModLoader.GetMod("ThoriumMod").ItemType("BoreanBag")), 1);
 				recipe.AddRecipe();
@@ -1161,6 +1132,8 @@ namespace CraftableTreasureBags
 				recipe.SetResult((ModLoader.GetMod("ThoriumMod").ItemType("RagBag")), 1);
 				recipe.AddRecipe();
 			}
+			#endregion Thorium Mod boss treasure bags
+
 			// Modded Treasure Bags: Mod of Redemption
 			if (ModLoader.GetMod("Redemption") != null)
 			{

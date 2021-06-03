@@ -9,29 +9,32 @@ using Terraria;
 using Terraria.DataStructures;
 using Terraria.UI;
 using Terraria.ID;
+using Terraria.Enums;
 using Terraria.ModLoader;
+using Terraria.ModLoader.IO;
 using Terraria.Graphics.Effects;
 using Terraria.Graphics.Shaders;
 using Terraria.Localization;
 using static Terraria.ModLoader.ModContent;
 using System.Runtime.InteropServices;
 using ReLogic.Graphics;
+using Terraria.GameContent;
 using Terraria.GameContent.UI;
 using Terraria.ModLoader.Exceptions;
+using Terraria.GameInput;
 
 namespace CraftableTreasureBags.Items.ThoriumMod
 {
-	public class DangerPendant : ModItem
+	public class AbyssalPendant : ModItem
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Danger Pendant");
+			DisplayName.SetDefault("Abyssal Pendant");
 			Tooltip.SetDefault("Not Equippable"
-				+ $"\nUsed to make boss treasure bags from the [c/6E8CB4:Thorium] Mod"
-				+ $"\nCan be upgraded for use with hardmode treasure bags"
-				+ $"\n - While favorited in your inventory, you are immune to Poisoned."
-				+ $"\n - However, life regeneration lowers over time, possibly to 0."
-				+ $"\n'Putting this on makes you in danger, so it's best to just hold on to it'");
+				+ $"\nUsed to make Hardmode boss treasure bags from the [c/6E8CB4:Thorium] Mod"
+				+ $"\n - While favorited in your inventory, you are faster in water, mana regenerates faster, and you breathe better in liquid."
+				+ $"\n - However, you're slower on land, and you breathe worse out of water"
+				+ $"\n'Putting this on makes your lungs feel boundless, so it's best to just hold on to it'");
 		}
 
 		public override void SetDefaults()
@@ -40,18 +43,26 @@ namespace CraftableTreasureBags.Items.ThoriumMod
 			item.height = 50;
 			item.maxStack = 99;
 			item.value = 1000;
-			item.rare = 2;
+			item.rare = 4;
 		}
 
 		public override void UpdateInventory(Player player)
 		{
 			if (item.favorited)
 			{
-				player.buffImmune[20] = true;
-				player.lifeRegenTime -= 1;
+				player.manaRegen += 1;
+				if (player.wet) // if (!inLiquid)
+				{
+					player.breath += 1;
+					player.moveSpeed += 0.5f;
+				}
+				else
+				{
+					player.breath -= 3;
+					player.moveSpeed -= 0.1f;
+				}
 			}
 		}
-
 		Color[] itemNameCycleColors = new Color[]{
 			new Color(145, 170, 60),
 			new Color(145, 170, 60),
