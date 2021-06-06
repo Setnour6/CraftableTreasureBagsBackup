@@ -126,6 +126,10 @@ namespace CraftableTreasureBags
 				recipe.AddIngredient((ModLoader.GetMod("CalamityMod").ItemType("VictoryShard")), 5);
 				recipe.AddIngredient((ModLoader.GetMod("CalamityMod").ItemType("KnowledgeKingSlime")), 1);
 			}
+			if (ModLoader.GetMod("ThoriumMod") != null)
+			{
+				recipe.AddIngredient((ModLoader.GetMod("ThoriumMod").ItemType("DangerShard")), 3);
+			}
 			recipe.AddIngredient(ItemID.KingSlimeMask, 1);
 			recipe.AddTile(TileID.DemonAltar);
 			recipe.SetResult(ItemID.KingSlimeBossBag);
@@ -152,6 +156,10 @@ namespace CraftableTreasureBags
 				recipe.AddIngredient((ModLoader.GetMod("CalamityMod").ItemType("VictoryShard")), 5);
 				recipe.AddIngredient((ModLoader.GetMod("CalamityMod").ItemType("KnowledgeEyeofCthulhu")), 1);
 			}
+			if (ModLoader.GetMod("ThoriumMod") != null)
+			{
+				recipe.AddIngredient((ModLoader.GetMod("ThoriumMod").ItemType("DangerShard")), 3);
+			}
 			recipe.AddIngredient(ItemID.EyeMask, 1);
 			recipe.AddTile(TileID.DemonAltar);
 			recipe.SetResult(ItemID.EyeOfCthulhuBossBag);
@@ -166,6 +174,10 @@ namespace CraftableTreasureBags
 			{
 				recipe.AddIngredient((ModLoader.GetMod("CalamityMod").ItemType("VictoryShard")), 5);
 				recipe.AddIngredient((ModLoader.GetMod("CalamityMod").ItemType("KnowledgeEyeofCthulhu")), 1);
+			}
+			if (ModLoader.GetMod("ThoriumMod") != null)
+			{
+				recipe.AddIngredient((ModLoader.GetMod("ThoriumMod").ItemType("DangerShard")), 3);
 			}
 			recipe.AddIngredient(ItemID.EyeMask, 1);
 			recipe.AddTile(TileID.DemonAltar);
@@ -182,6 +194,10 @@ namespace CraftableTreasureBags
 			{
 				recipe.AddIngredient((ModLoader.GetMod("CalamityMod").ItemType("VictoryShard")), 5);
 				recipe.AddIngredient((ModLoader.GetMod("CalamityMod").ItemType("KnowledgeEaterofWorlds")), 1);
+			}
+			if (ModLoader.GetMod("ThoriumMod") != null)
+			{
+				recipe.AddIngredient((ModLoader.GetMod("ThoriumMod").ItemType("DangerShard")), 3);
 			}
 			recipe.AddIngredient(ItemID.ShadowScale, 50);
 			recipe.AddIngredient(ItemID.EaterMask, 1);
@@ -201,6 +217,10 @@ namespace CraftableTreasureBags
 				recipe.AddIngredient((ModLoader.GetMod("CalamityMod").ItemType("VictoryShard")), 5);
 				recipe.AddIngredient((ModLoader.GetMod("CalamityMod").ItemType("KnowledgeBrainofCthulhu")), 1);
 			}
+			if (ModLoader.GetMod("ThoriumMod") != null)
+			{
+				recipe.AddIngredient((ModLoader.GetMod("ThoriumMod").ItemType("DangerShard")), 3);
+			}
 			recipe.AddIngredient(ItemID.BrainMask, 1);
 			recipe.AddTile(TileID.DemonAltar);
 			recipe.SetResult(ItemID.BrainOfCthulhuBossBag);
@@ -216,6 +236,10 @@ namespace CraftableTreasureBags
 				recipe.AddIngredient((ModLoader.GetMod("CalamityMod").ItemType("VictoryShard")), 5);
 				recipe.AddIngredient((ModLoader.GetMod("CalamityMod").ItemType("KnowledgeQueenBee")), 1);
 			}
+			if (ModLoader.GetMod("ThoriumMod") != null)
+			{
+				recipe.AddIngredient((ModLoader.GetMod("ThoriumMod").ItemType("DangerShard")), 3);
+			}
 			recipe.AddIngredient(ItemID.BeeMask, 1);
 			recipe.AddTile(TileID.DemonAltar);
 			recipe.SetResult(ItemID.QueenBeeBossBag);
@@ -230,6 +254,10 @@ namespace CraftableTreasureBags
 				recipe.AddIngredient((ModLoader.GetMod("CalamityMod").ItemType("VictoryShard")), 5);
 				recipe.AddIngredient((ModLoader.GetMod("CalamityMod").ItemType("KnowledgeSkeletron")), 1);
 
+			}
+			if (ModLoader.GetMod("ThoriumMod") != null)
+			{
+				recipe.AddIngredient((ModLoader.GetMod("ThoriumMod").ItemType("DangerShard")), 3);
 			}
 			recipe.AddIngredient(ItemID.SkeletronMask, 1);
 			recipe.AddTile(TileID.DemonAltar);
@@ -249,6 +277,10 @@ namespace CraftableTreasureBags
 					recipe.AddIngredient((ModLoader.GetMod("CalamityMod").ItemType("VictoryShard")), 5);
 					recipe.AddIngredient((ModLoader.GetMod("CalamityMod").ItemType("KnowledgeWallofFlesh")), 1);
 				}
+				if (ModLoader.GetMod("ThoriumMod") != null)
+				{
+					recipe.AddIngredient((ModLoader.GetMod("ThoriumMod").ItemType("DangerShard")), 5);
+				}
 				recipe.AddIngredient(ItemID.FleshMask, 1);
 				recipe.AddTile(TileID.DemonAltar);
 				recipe.SetResult(ItemID.WallOfFleshBossBag);
@@ -265,6 +297,10 @@ namespace CraftableTreasureBags
 				recipe.AddIngredient((ModLoader.GetMod("CalamityMod").ItemType("VictoryShard")), 5);
 				recipe.AddIngredient((ModLoader.GetMod("CalamityMod").ItemType("KnowledgeDestroyer")), 1);
 			}
+			if (ModLoader.GetMod("ThoriumMod") != null)
+			{
+				recipe.AddIngredient((ModLoader.GetMod("ThoriumMod").ItemType("DangerShard")), 5);
+			}
 			recipe.AddIngredient(ItemID.DestroyerMask, 1);
 			recipe.AddTile(TileID.DemonAltar);
 			recipe.SetResult(ItemID.DestroyerBossBag);
@@ -280,6 +316,10 @@ namespace CraftableTreasureBags
 				recipe.AddIngredient((ModLoader.GetMod("CalamityMod").ItemType("VictoryShard")), 5);
 				recipe.AddIngredient((ModLoader.GetMod("CalamityMod").ItemType("KnowledgeTwins")), 1);
 			}
+			if (ModLoader.GetMod("ThoriumMod") != null)
+			{
+				recipe.AddIngredient((ModLoader.GetMod("ThoriumMod").ItemType("DangerShard")), 5);
+			}
 			recipe.AddIngredient(ItemID.TwinMask, 1);
 			recipe.AddTile(TileID.DemonAltar);
 			recipe.SetResult(ItemID.TwinsBossBag);
@@ -294,6 +334,10 @@ namespace CraftableTreasureBags
 			{
 				recipe.AddIngredient((ModLoader.GetMod("CalamityMod").ItemType("VictoryShard")), 5);
 				recipe.AddIngredient((ModLoader.GetMod("CalamityMod").ItemType("KnowledgeSkeletronPrime")), 1);
+			}
+			if (ModLoader.GetMod("ThoriumMod") != null)
+			{
+				recipe.AddIngredient((ModLoader.GetMod("ThoriumMod").ItemType("DangerShard")), 5);
 			}
 			recipe.AddIngredient(ItemID.SkeletronPrimeMask, 1);
 			recipe.AddTile(TileID.DemonAltar);
@@ -323,6 +367,10 @@ namespace CraftableTreasureBags
 				recipe.AddIngredient((ModLoader.GetMod("CalamityMod").ItemType("VictoryShard")), 5);
 				recipe.AddIngredient((ModLoader.GetMod("CalamityMod").ItemType("KnowledgePlantera")), 1);
 			}
+			if (ModLoader.GetMod("ThoriumMod") != null)
+			{
+				recipe.AddIngredient((ModLoader.GetMod("ThoriumMod").ItemType("DangerShard")), 5);
+			}
 			recipe.AddIngredient(ItemID.PlanteraMask, 1);
 			recipe.AddTile(TileID.DemonAltar);
 			recipe.SetResult(ItemID.PlanteraBossBag);
@@ -338,6 +386,10 @@ namespace CraftableTreasureBags
 				recipe.AddIngredient((ModLoader.GetMod("CalamityMod").ItemType("VictoryShard")), 5);
 				recipe.AddIngredient((ModLoader.GetMod("CalamityMod").ItemType("KnowledgeGolem")), 1);
 			}
+			if (ModLoader.GetMod("ThoriumMod") != null)
+			{
+				recipe.AddIngredient((ModLoader.GetMod("ThoriumMod").ItemType("DangerShard")), 5);
+			}
 			recipe.AddIngredient(ItemID.GolemMask, 1);
 			recipe.AddTile(TileID.DemonAltar);
 			recipe.SetResult(ItemID.GolemBossBag);
@@ -348,6 +400,7 @@ namespace CraftableTreasureBags
 			recipe.AddIngredient(ItemID.TruffleWorm, 1);
 			recipe.AddIngredient(ItemID.FishronWings, 1);
 			recipe.AddIngredient(ItemID.Moonglow, 3);
+			recipe.AddIngredient(ItemID.Waterleaf, 3);
 			if (ModLoader.GetMod("CalamityMod") != null)
 			{
 				recipe.AddIngredient(ItemID.Bacon, 5);
@@ -360,6 +413,10 @@ namespace CraftableTreasureBags
 			{
 				recipe.AddIngredient((ModLoader.GetMod("CalamityMod").ItemType("VictoryShard")), 5);
 				recipe.AddIngredient((ModLoader.GetMod("CalamityMod").ItemType("KnowledgeDukeFishron")), 1);
+			}
+			if (ModLoader.GetMod("ThoriumMod") != null)
+			{
+				recipe.AddIngredient((ModLoader.GetMod("ThoriumMod").ItemType("DangerShard")), 5);
 			}
 			recipe.AddIngredient(ItemID.DukeFishronMask, 1);
 			recipe.AddTile(TileID.DemonAltar);
@@ -377,6 +434,10 @@ namespace CraftableTreasureBags
 			{
 				recipe.AddIngredient((ModLoader.GetMod("CalamityMod").ItemType("VictoryShard")), 5);
 				recipe.AddIngredient((ModLoader.GetMod("CalamityMod").ItemType("KnowledgeMoonLord")), 1);
+			}
+			if (ModLoader.GetMod("ThoriumMod") != null)
+			{
+				recipe.AddIngredient((ModLoader.GetMod("ThoriumMod").ItemType("DangerShard")), 5);
 			}
 			recipe.AddIngredient(ItemID.BossMaskMoonlord, 1);
 			recipe.AddTile(TileID.DemonAltar);
@@ -981,6 +1042,7 @@ namespace CraftableTreasureBags
 				recipe.AddIngredient((ModLoader.GetMod("ThoriumMod").ItemType("JellyfishResonator")), 1);
 				recipe.AddIngredient(ItemID.PinkGel, 30);
 				recipe.AddIngredient(ItemID.Glowstick, 20);
+				recipe.AddIngredient(ItemID.Waterleaf, 3);
 				recipe.AddIngredient((ModLoader.GetMod("ThoriumMod").ItemType("QueensGlowstick")), 1);
 				recipe.AddTile(TileID.DemonAltar);
 				recipe.SetResult((ModLoader.GetMod("ThoriumMod").ItemType("JellyFishBag")), 1);
@@ -1026,97 +1088,44 @@ namespace CraftableTreasureBags
 				// Borean Strider loot recipes start here
 				recipe = new ModRecipe(this);
 				recipe.AddIngredient(this.GetItem("EmptyTreasureBag"));
+				recipe.AddIngredient(this.GetItem("AbyssalPendant"));
 				recipe.AddIngredient((ModLoader.GetMod("ThoriumMod").ItemType("StriderTear")), 1);
 				recipe.AddIngredient(ItemID.IceBlock, 50);
-				recipe.AddTile(TileID.DemonAltar);
-				recipe.SetResult((ModLoader.GetMod("ThoriumMod").ItemType("BoreanBag")), 1);
-				recipe.AddRecipe();
-				recipe = new ModRecipe(this);
-				recipe.AddIngredient(this.GetItem("EmptyTreasureBag"));
-				recipe.AddIngredient((ModLoader.GetMod("ThoriumMod").ItemType("StriderTear")), 1);
-				recipe.AddIngredient((ModLoader.GetMod("ThoriumMod").ItemType("GlacierFang")), 1);
-				recipe.AddTile(TileID.DemonAltar);
-				recipe.SetResult((ModLoader.GetMod("ThoriumMod").ItemType("BoreanBag")), 1);
-				recipe.AddRecipe();
-				recipe = new ModRecipe(this);
-				recipe.AddIngredient(this.GetItem("EmptyTreasureBag"));
-				recipe.AddIngredient((ModLoader.GetMod("ThoriumMod").ItemType("StriderTear")), 1);
-				recipe.AddIngredient((ModLoader.GetMod("ThoriumMod").ItemType("FrostFang")), 1);
-				recipe.AddTile(TileID.DemonAltar);
-				recipe.SetResult((ModLoader.GetMod("ThoriumMod").ItemType("BoreanBag")), 1);
-				recipe.AddRecipe();
-				recipe = new ModRecipe(this);
-				recipe.AddIngredient(this.GetItem("EmptyTreasureBag"));
-				recipe.AddIngredient((ModLoader.GetMod("ThoriumMod").ItemType("StriderTear")), 1);
-				recipe.AddIngredient((ModLoader.GetMod("ThoriumMod").ItemType("FreezeRay")), 1);
-				recipe.AddTile(TileID.DemonAltar);
-				recipe.SetResult((ModLoader.GetMod("ThoriumMod").ItemType("BoreanBag")), 1);
-				recipe.AddRecipe();
-				recipe = new ModRecipe(this);
-				recipe.AddIngredient(this.GetItem("EmptyTreasureBag"));
-				recipe.AddIngredient((ModLoader.GetMod("ThoriumMod").ItemType("StriderTear")), 1);
-				recipe.AddIngredient((ModLoader.GetMod("ThoriumMod").ItemType("CryoFang")), 1);
+				recipe.AddIngredient(ItemID.SnowBlock, 20);
+				recipe.AddIngredient(ItemID.Shiverthorn, 3);
 				recipe.AddTile(TileID.DemonAltar);
 				recipe.SetResult((ModLoader.GetMod("ThoriumMod").ItemType("BoreanBag")), 1);
 				recipe.AddRecipe();
 				// Borean Strider loot recipes end here
 				recipe = new ModRecipe(this);
 				recipe.AddIngredient(this.GetItem("EmptyTreasureBag"));
+				recipe.AddIngredient(this.GetItem("AbyssalPendant"));
 				recipe.AddIngredient((ModLoader.GetMod("ThoriumMod").ItemType("VoidLens")), 1);
 				recipe.AddIngredient((ModLoader.GetMod("ThoriumMod").ItemType("EyeofBeholder")), 1);
+				recipe.AddIngredient((ModLoader.GetMod("ThoriumMod").ItemType("VoidHeart")), 1);
+				recipe.AddIngredient((ModLoader.GetMod("ThoriumMod").ItemType("MagmaCore")), 6);
+				recipe.AddIngredient(ItemID.Fireblossom, 3);
 				recipe.AddTile(TileID.DemonAltar);
 				recipe.SetResult((ModLoader.GetMod("ThoriumMod").ItemType("BeholderBag")), 1);
 				recipe.AddRecipe();
 				recipe = new ModRecipe(this);
 				recipe.AddIngredient(this.GetItem("EmptyTreasureBag"));
+				recipe.AddIngredient(this.GetItem("AbyssalPendant"));
 				recipe.AddIngredient((ModLoader.GetMod("ThoriumMod").ItemType("CursedCloth")), 22);
 				recipe.AddIngredient(ItemID.PumpkinMoonMedallion, 1);
 				recipe.AddIngredient((ModLoader.GetMod("ThoriumMod").ItemType("TheLostCross")), 1);
+				recipe.AddIngredient(ItemID.Deathweed, 3);
 				recipe.AddTile(TileID.DemonAltar);
 				recipe.SetResult((ModLoader.GetMod("ThoriumMod").ItemType("LichBag")), 1);
 				recipe.AddRecipe();
 				// Abyssion, The Forgotten One loot recipes start here
 				recipe = new ModRecipe(this);
 				recipe.AddIngredient(this.GetItem("EmptyTreasureBag"));
-				recipe.AddIngredient((ModLoader.GetMod("ThoriumMod").ItemType("AbyssalShadow2")), 1);
-				recipe.AddIngredient((ModLoader.GetMod("ThoriumMod").ItemType("TheIncubator")), 1);
-				recipe.AddTile(TileID.DemonAltar);
-				recipe.SetResult((ModLoader.GetMod("ThoriumMod").ItemType("AbyssionBag")), 1);
-				recipe.AddRecipe();
-				recipe = new ModRecipe(this);
-				recipe.AddIngredient(this.GetItem("EmptyTreasureBag"));
-				recipe.AddIngredient((ModLoader.GetMod("ThoriumMod").ItemType("AbyssalShadow2")), 1);
-				recipe.AddIngredient((ModLoader.GetMod("ThoriumMod").ItemType("MantisPunch")), 1);
-				recipe.AddTile(TileID.DemonAltar);
-				recipe.SetResult((ModLoader.GetMod("ThoriumMod").ItemType("AbyssionBag")), 1);
-				recipe.AddRecipe();
-				recipe = new ModRecipe(this);
-				recipe.AddIngredient(this.GetItem("EmptyTreasureBag"));
-				recipe.AddIngredient((ModLoader.GetMod("ThoriumMod").ItemType("AbyssalShadow2")), 1);
-				recipe.AddIngredient((ModLoader.GetMod("ThoriumMod").ItemType("TrenchSpitter")), 1);
-				recipe.AddTile(TileID.DemonAltar);
-				recipe.SetResult((ModLoader.GetMod("ThoriumMod").ItemType("AbyssionBag")), 1);
-				recipe.AddRecipe();
-				recipe = new ModRecipe(this);
-				recipe.AddIngredient(this.GetItem("EmptyTreasureBag"));
-				recipe.AddIngredient((ModLoader.GetMod("ThoriumMod").ItemType("AbyssalShadow2")), 1);
-				recipe.AddIngredient((ModLoader.GetMod("ThoriumMod").ItemType("OldGodGrasp")), 1);
-				recipe.AddTile(TileID.DemonAltar);
-				recipe.SetResult((ModLoader.GetMod("ThoriumMod").ItemType("AbyssionBag")), 1);
-				recipe.AddRecipe();
-				recipe = new ModRecipe(this);
-				recipe.AddIngredient(this.GetItem("EmptyTreasureBag"));
-				recipe.AddIngredient((ModLoader.GetMod("ThoriumMod").ItemType("AbyssalShadow2")), 1);
-				recipe.AddIngredient((ModLoader.GetMod("ThoriumMod").ItemType("SirensAllure")), 1);
-				recipe.AddTile(TileID.DemonAltar);
-				recipe.SetResult((ModLoader.GetMod("ThoriumMod").ItemType("AbyssionBag")), 1);
-				recipe.AddRecipe();
-				recipe = new ModRecipe(this);
-				recipe.AddIngredient(this.GetItem("EmptyTreasureBag"));
-				recipe.AddIngredient((ModLoader.GetMod("ThoriumMod").ItemType("AbyssalShadow2")), 1);
-				recipe.AddIngredient((ModLoader.GetMod("ThoriumMod").ItemType("WhisperingHood")), 1);
-				recipe.AddIngredient((ModLoader.GetMod("ThoriumMod").ItemType("WhisperingTabard")), 1);
-				recipe.AddIngredient((ModLoader.GetMod("ThoriumMod").ItemType("WhisperingLeggings")), 1);
+				recipe.AddIngredient(this.GetItem("AbyssalPendant"));
+				recipe.AddIngredient((ModLoader.GetMod("ThoriumMod").ItemType("AbyssalShadow2")), 2);
+				recipe.AddIngredient((ModLoader.GetMod("ThoriumMod").ItemType("DarkMatter")), 50);
+				recipe.AddIngredient((ModLoader.GetMod("ThoriumMod").ItemType("DepthScale")), 15);
+				recipe.AddIngredient(ItemID.Waterleaf, 5);
 				recipe.AddTile(TileID.DemonAltar);
 				recipe.SetResult((ModLoader.GetMod("ThoriumMod").ItemType("AbyssionBag")), 1);
 				recipe.AddRecipe();
@@ -1128,6 +1137,8 @@ namespace CraftableTreasureBags
 				recipe.AddIngredient((ModLoader.GetMod("ThoriumMod").ItemType("OceanEssence")), 16);
 				recipe.AddIngredient((ModLoader.GetMod("ThoriumMod").ItemType("DeathEssence")), 16);
 				recipe.AddIngredient((ModLoader.GetMod("ThoriumMod").ItemType("InfernoEssence")), 16);
+				recipe.AddIngredient((ModLoader.GetMod("ThoriumMod").ItemType("TerrariumCore")), 6);
+				recipe.AddIngredient(ItemID.Moonglow, 5);
 				recipe.AddTile(TileID.DemonAltar);
 				recipe.SetResult((ModLoader.GetMod("ThoriumMod").ItemType("RagBag")), 1);
 				recipe.AddRecipe();

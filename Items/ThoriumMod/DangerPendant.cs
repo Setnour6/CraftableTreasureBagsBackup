@@ -30,7 +30,7 @@ namespace CraftableTreasureBags.Items.ThoriumMod
 				+ $"\nUsed to make boss treasure bags from the [c/6E8CB4:Thorium] Mod"
 				+ $"\nCan be upgraded for use with hardmode treasure bags"
 				+ $"\n - While favorited in your inventory, you are immune to Poisoned."
-				+ $"\n - However, life regeneration lowers over time, possibly to 0."
+				+ $"\n - However, life regeneration lowers over time until it reaches 0."
 				+ $"\n'Putting this on makes you in danger, so it's best to just hold on to it'");
 		}
 
@@ -48,7 +48,7 @@ namespace CraftableTreasureBags.Items.ThoriumMod
 			if (item.favorited)
 			{
 				player.buffImmune[20] = true;
-				player.lifeRegenTime -= 1;
+				player.lifeRegenTime -= 2;
 			}
 		}
 

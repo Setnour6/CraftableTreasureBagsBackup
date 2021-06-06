@@ -32,8 +32,9 @@ namespace CraftableTreasureBags.Items.ThoriumMod
 			DisplayName.SetDefault("Abyssal Pendant");
 			Tooltip.SetDefault("Not Equippable"
 				+ $"\nUsed to make Hardmode boss treasure bags from the [c/6E8CB4:Thorium] Mod"
-				+ $"\n - While favorited in your inventory, you are faster in water, mana regenerates faster, and you breathe better in liquid."
-				+ $"\n - However, you're slower on land, and you breathe worse out of water"
+				+ $"\n - While favorited in your inventory, mana regenerates faster on land, and you move faster in water."
+				+ $"\n - However, you're slower on land, mana regenerates slower in water, and you're breath does not regenerate."
+				+ $"\n [c/FF8A6D:- due to exploitations, life regeneration is also lowered in water if 1/4 of breath is used up.]"
 				+ $"\n'Putting this on makes your lungs feel boundless, so it's best to just hold on to it'");
 		}
 
@@ -50,23 +51,32 @@ namespace CraftableTreasureBags.Items.ThoriumMod
 		{
 			if (item.favorited)
 			{
-				player.manaRegen += 1;
-				if (player.wet) // if (!inLiquid)
+				
+				if (player.wet && !player.lavaWet && !player.honeyWet) // (player.wet) means all liquids. player.wet && !player.lavaWet && !player.honeyWet means only water but not honey or lava.
 				{
-					player.breath += 1;
+					//player.breath += 1;
 					player.moveSpeed += 0.5f;
+					player.manaRegenBonus -= 15;
 				}
 				else
 				{
 					player.breath -= 3;
-					player.moveSpeed -= 0.1f;
+					player.moveSpeed -= 0.25f;
+					player.manaRegenBonus += 15;
+				}
+				if (player.wet && !player.lavaWet && !player.honeyWet && player.breath <= 150)
+                {
+					player.lifeRegen -= 2;
+                }
+				if (player.breath <= 0)
+                {
+					player.suffocating = true;
 				}
 			}
 		}
 		Color[] itemNameCycleColors = new Color[]{
-			new Color(145, 170, 60),
-			new Color(145, 170, 60),
-			new Color(250, 20, 110)
+			new Color(70, 200, 160),
+			new Color(230, 170, 50)
 		};
 
 		public override void ModifyTooltips(List<TooltipLine> tooltips)
@@ -77,8 +87,8 @@ namespace CraftableTreasureBags.Items.ThoriumMod
 				if (line2.mod == "Terraria" && line2.Name == "ItemName")
 				{
 					float fade = Main.GameUpdateCount % 120 / 120f;
-					int index = (int)(Main.GameUpdateCount / 120 % 3);
-					line2.overrideColor = Color.Lerp(itemNameCycleColors[index], itemNameCycleColors[(index + 1) % 3], fade);
+					int index = (int)(Main.GameUpdateCount / 120 % 2);
+					line2.overrideColor = Color.Lerp(itemNameCycleColors[index], itemNameCycleColors[(index + 1) % 2], fade);
 				}
 			}
 		}
@@ -86,10 +96,13 @@ namespace CraftableTreasureBags.Items.ThoriumMod
 		public override void AddRecipes()
 		{
 			var recipe = new ModRecipe(mod);
-			recipe.AddRecipeGroup("CraftableTreasureBags:Gold/Platinum Pendant");
-			recipe.AddIngredient((ModLoader.GetMod("ThoriumMod").ItemType("DangerShard")), 4);
-			recipe.AddTile((ModLoader.GetMod("ThoriumMod").TileType("ArcaneArmorFabricator")));
-			//recipe.AddTile(TileID.Anvils);
+			recipe.AddIngredient(ModContent.ItemType<DangerPendant>());
+			recipe.AddIngredient((ModLoader.GetMod("ThoriumMod").ItemType("AbyssalChitin")), 5);
+			recipe.AddIngredient((ModLoader.GetMod("ThoriumMod").ItemType("SpiritDroplet")), 1);
+			recipe.AddIngredient((ModLoader.GetMod("ThoriumMod").ItemType("DepthScale")), 2);
+			recipe.AddIngredient((ModLoader.GetMod("ThoriumMod").ItemType("FishScale")), 1);
+			//recipe.AddTile((ModLoader.GetMod("ThoriumMod").TileType("ArcaneArmorFabricator")));
+			recipe.AddTile(TileID.MythrilAnvil);
 			recipe.SetResult(this);
 			recipe.AddRecipe();
 		}

@@ -34,7 +34,7 @@ namespace CraftableTreasureBags
 		{
 			Item item = new Item();
 			item.SetDefaults(ModContent.ItemType<CelebratoryPendant>());
-			item.stack = 2;
+			item.stack = 1;
 			items.Add(item);
 		}
 	}

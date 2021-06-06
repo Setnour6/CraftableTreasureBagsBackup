@@ -45,6 +45,9 @@ EVENT: You can now craft a pre-hardmode treasure bag of your choice with the Cel
 Version 0.16:
 - Fixed an issue where the Spirit Pendant would have some of the same tooltips as the Bismite Pendant (Spirit Mod)
 - Added Danger Pendant and Abyssal Pendant, which can only be obtained if the Thorium Mod is enabled.
+- All Vanilla boss treasure bags now require Danger Shards to craft (If the Thorium Mod is enabled).
+- Changed all of the recipes for the Thorium Mod boss treasure bags. (Removing weapon loot to craft, adding herbs and other items to craft with, pendants as well, etc.)
+- One celebratory pendant gets loaded into your inventory upon character creation instead of two (I gave you all two chances, and now you get one.)
 
 Version 0.15.1:
 - Reworked all pendants, due to a fatal tModLoader bug that wiped out all of my game data and mod data.
