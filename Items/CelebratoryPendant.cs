@@ -28,8 +28,9 @@ namespace CraftableTreasureBags.Items
 		{
 			DisplayName.SetDefault("Celebratory Pendant");
 			Tooltip.SetDefault("Not Equippable"
-				+ $"\nUsed to make any pre-hardmode boss treasure bag of your choice"
-				+ $"\n[i/s1:29] Thank you for 50,000 Downloads! [i/s1:29]");
+				+ $"\nThis was used to make any pre-hardmode boss treasure bag of your choice"
+				+ $"\nThis is no longer the case, as the event has ended");
+				//+ $"\n[i/s1:29] Thank you for 50,000 Downloads! [i/s1:29]");
 		}
 
 		public override void SetDefaults()

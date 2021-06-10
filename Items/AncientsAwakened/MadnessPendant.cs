@@ -40,7 +40,7 @@ namespace CraftableTreasureBags.Items.AncientsAwakened
 			item.height = 50;
 			item.maxStack = 99;
 			item.value = 1000;
-			item.rare = 0;
+			item.rare = 1;
 		}
 
 		public override void UpdateInventory(Player player)
@@ -64,8 +64,8 @@ namespace CraftableTreasureBags.Items.AncientsAwakened
 			{
 				if (line2.mod == "Terraria" && line2.Name == "ItemName")
 				{
-					float fade = Main.GameUpdateCount % 60 / 60f;
-					int index = (int)(Main.GameUpdateCount / 60 % 2);
+					float fade = Main.GameUpdateCount % 120 / 120f;
+					int index = (int)(Main.GameUpdateCount / 120 % 2);
 					line2.overrideColor = Color.Lerp(itemNameCycleColors[index], itemNameCycleColors[(index + 1) % 2], fade);
 				}
 			}

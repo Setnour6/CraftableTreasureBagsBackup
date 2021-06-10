@@ -19,21 +19,21 @@ using ReLogic.Graphics;
 using Terraria.GameContent.UI;
 using Terraria.ModLoader.Exceptions;
 
-namespace CraftableTreasureBags.Items.AncientsAwakened
+namespace CraftableTreasureBags.Items.ModOfRedemption
 {
-	public class MadnessPendant2Animated : ModItem
+	public class SoulPendant2Animated : ModItem
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Forsaken Pendant");
+			DisplayName.SetDefault("Charged Soul Pendant");
 			Tooltip.SetDefault("Not Equippable"
-				+ $"\nUsed to make Hardmode boss treasure bags from the [c/6E8CB4:Ancients Awakened] Mod"
+				+ $"\n[c/FF8F00:Not to be confused with the Soulful Pendant for the Ancients Awakened Mod]"
+				+ $"\nUsed to make hardmode boss treasure bags from the [c/6E8CB4:Mod of Redemption]"
+				+ $"\n - While favorited in your inventory, you take 4% less damage, and jump slightly higher."
+				+ $"\n - However, you receive mild xenomite infection if you have more than 75% health."
 				+ $"\nCan be upgraded for use with Post-Moon Lord treasure bags"
-				+ $"\n - While favorited in your inventory, you deal 10% more damage."
-				+ $"\n - However, you take 10% more damage."
-				+ $"\n'Putting this on makes you madder and hurts your neck more, so it's best to just hold on to it'");
-			
-			Main.RegisterItemAnimation(item.type, new DrawAnimationVertical(8, 6));
+				+ $"\n'Putting this on makes you're own soul float quickly, so it's best to just hold on to it'");
+			Main.RegisterItemAnimation(item.type, new DrawAnimationVertical(6, 4));
 
 		}
 
@@ -47,19 +47,21 @@ namespace CraftableTreasureBags.Items.AncientsAwakened
 		}
 
 		public override void UpdateInventory(Player player)
-        {
+		{
 			if (item.favorited)
-            {
-				player.allDamage += 0.1f;
-				player.endurance -= 0.1f;
+			{
+				player.endurance += 0.04f;
+				player.jumpSpeedBoost += 1.2f;
+				if (player.statLife > player.statLifeMax2 * 0.75)
+					player.AddBuff((ModLoader.GetMod("Redemption").BuffType("XenomiteDebuff")), 1);
 			}
-        }
+		}
 
 		Color[] itemNameCycleColors = new Color[]{
-			new Color(230, 200, 40),
-			new Color(45, 210, 200),
-			new Color(95, 95, 180),
-			new Color(215, 160, 175)
+			new Color(85, 125, 120),
+			new Color(250, 100, 100),
+			new Color(0, 180, 20),
+			new Color(255, 255, 255)
 		};
 
 		public override void ModifyTooltips(List<TooltipLine> tooltips)
@@ -78,13 +80,15 @@ namespace CraftableTreasureBags.Items.AncientsAwakened
 
 		public override void AddRecipes()
 		{
-			if (ModLoader.GetMod("AAMod") != null)
-            {
-				ModRecipe recipe = new ModRecipe(mod);
-				recipe.AddIngredient(ModContent.ItemType<MadnessPendant>());
-				recipe.AddIngredient((ModLoader.GetMod("AAMod").ItemType("DragonSpirit")), 5);
-				recipe.AddIngredient((ModLoader.GetMod("AAMod").ItemType("ForsakenFragment")), 6);
-				recipe.AddTile(TileID.MythrilAnvil);
+			if (ModLoader.GetMod("Redemption") != null)
+			{
+				var recipe = new ModRecipe(mod);
+				recipe.AddIngredient(ModContent.ItemType<SoulPendantAnimated>());
+				recipe.AddIngredient((ModLoader.GetMod("Redemption").ItemType("LostSoul")), 2);
+				recipe.AddIngredient((ModLoader.GetMod("Redemption").ItemType("MoonflareFragment")), 2);
+				recipe.AddIngredient((ModLoader.GetMod("Redemption").ItemType("Xenomite")), 2);
+				recipe.AddTile((ModLoader.GetMod("Redemption").TileType("DruidicAltarTile")));
+				//recipe.AddTile(TileID.Anvils);
 				recipe.SetResult(this);
 				recipe.AddRecipe();
 			}

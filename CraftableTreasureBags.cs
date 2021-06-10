@@ -67,41 +67,64 @@ namespace CraftableTreasureBags
 			}
 		}
 
+		static float ColorTimer;
+		public static Color XeniumColor()
+		{
+			Color XeniumGreenColor = new Color(50, 250, 50);
+			Color XeniumDarkishGreenColor = new Color(25, 150, 25);
+			Color XeniumDarkGreenColor = new Color(10, 100, 10);
+			Color XeniumDarkishGreenColor2 = new Color(25, 150, 25);
+			ColorTimer += 0.5f;
+			if (ColorTimer >= 400)
+			{
+				ColorTimer = 0;
+			}
+
+			if (ColorTimer < 100)
+				return Color.Lerp(XeniumGreenColor, XeniumDarkishGreenColor, ColorTimer / 100);
+			else if (ColorTimer < 200)
+				return Color.Lerp(XeniumDarkishGreenColor, XeniumDarkGreenColor, (ColorTimer - 100) / 100);
+			else if (ColorTimer < 300)
+				return Color.Lerp(XeniumDarkGreenColor, XeniumDarkishGreenColor2, (ColorTimer - 200) / 100);
+			else
+				return Color.Lerp(XeniumDarkishGreenColor2, XeniumGreenColor, (ColorTimer - 300) / 100);
+		}
+
 		public override void AddRecipes()
 		{
 			#region 50,000 downloads celebration
 
-			ModRecipe recipe = new ModRecipe(this);
-			recipe.AddIngredient(this.GetItem("CelebratoryPendant"));
-			recipe.SetResult(ItemID.KingSlimeBossBag);
-			recipe.AddRecipe();
-			recipe = new ModRecipe(this);
-			recipe.AddIngredient(this.GetItem("CelebratoryPendant"));
-			recipe.SetResult(ItemID.EyeOfCthulhuBossBag);
-			recipe.AddRecipe();
-			recipe = new ModRecipe(this);
-			recipe.AddIngredient(this.GetItem("CelebratoryPendant"));
-			recipe.SetResult(ItemID.EaterOfWorldsBossBag);
-			recipe.AddRecipe();
-			recipe = new ModRecipe(this);
-			recipe.AddIngredient(this.GetItem("CelebratoryPendant"));
-			recipe.SetResult(ItemID.BrainOfCthulhuBossBag);
-			recipe.AddRecipe();
-			recipe = new ModRecipe(this);
-			recipe.AddIngredient(this.GetItem("CelebratoryPendant"));
-			recipe.SetResult(ItemID.QueenBeeBossBag);
-			recipe.AddRecipe();
-			recipe = new ModRecipe(this);
-			recipe.AddIngredient(this.GetItem("CelebratoryPendant"));
-			recipe.SetResult(ItemID.SkeletronBossBag);
-			recipe.AddRecipe();
+		//	ModRecipe recipe = new ModRecipe(this);
+		//	recipe.AddIngredient(this.GetItem("CelebratoryPendant"));
+		//	recipe.SetResult(ItemID.KingSlimeBossBag);
+		//	recipe.AddRecipe();
+		//	recipe = new ModRecipe(this);
+		//	recipe.AddIngredient(this.GetItem("CelebratoryPendant"));
+		//	recipe.SetResult(ItemID.EyeOfCthulhuBossBag);
+		//	recipe.AddRecipe();
+		//	recipe = new ModRecipe(this);
+		//	recipe.AddIngredient(this.GetItem("CelebratoryPendant"));
+		//	recipe.SetResult(ItemID.EaterOfWorldsBossBag);
+		//	recipe.AddRecipe();
+		//	recipe = new ModRecipe(this);
+		//	recipe.AddIngredient(this.GetItem("CelebratoryPendant"));
+		//	recipe.SetResult(ItemID.BrainOfCthulhuBossBag);
+		//	recipe.AddRecipe();
+		//	recipe = new ModRecipe(this);
+		//	recipe.AddIngredient(this.GetItem("CelebratoryPendant"));
+		//	recipe.SetResult(ItemID.QueenBeeBossBag);
+		//	recipe.AddRecipe();
+		//	recipe = new ModRecipe(this);
+		//	recipe.AddIngredient(this.GetItem("CelebratoryPendant"));
+		//	recipe.SetResult(ItemID.SkeletronBossBag);
+		//	recipe.AddRecipe();
 
 			#endregion 50,000 downloads celebration
 
 			#region Vanilla boss treasure bags
 
-			recipe = new ModRecipe(this);
-			//ModRecipe recipe = new ModRecipe(this);
+			//recipe = new ModRecipe(this);
+			ModRecipe recipe = new ModRecipe(this);
 			recipe.AddIngredient(this.GetItem("EmptyTreasureBag"));
 			recipe.AddRecipeGroup("CraftableTreasureBags:Gold/Platinum Pendant");
 			//if (ModLoader.GetMod("CalamityMod") != null) || (ModLoader.GetMod("Fargowiltas") != null)
@@ -1150,6 +1173,7 @@ namespace CraftableTreasureBags
 			{
 				recipe = new ModRecipe(this);
 				recipe.AddIngredient(this.GetItem("EmptyTreasureBag"));
+				recipe.AddIngredient(this.GetItem("SoulPendantAnimated"));
 				recipe.AddIngredient((ModLoader.GetMod("Redemption").ItemType("EggCrown")), 1);
 				recipe.AddIngredient((ModLoader.GetMod("Redemption").ItemType("ChickenEgg")), 30);
 				recipe.AddIngredient((ModLoader.GetMod("Redemption").ItemType("Grain")), 2);
@@ -1159,33 +1183,10 @@ namespace CraftableTreasureBags
 				// Thorn, Bane of the Forest loot recipes start here
 				recipe = new ModRecipe(this);
 				recipe.AddIngredient(this.GetItem("EmptyTreasureBag"));
+				recipe.AddIngredient(this.GetItem("SoulPendantAnimated"));
 				recipe.AddIngredient((ModLoader.GetMod("Redemption").ItemType("HeartOfTheThorns")), 1);
 				recipe.AddIngredient(ItemID.JungleSpores, 10);
-				recipe.AddIngredient((ModLoader.GetMod("Redemption").ItemType("CursedGrassSword")), 1);
-				recipe.AddTile(TileID.DemonAltar);
-				recipe.SetResult((ModLoader.GetMod("Redemption").ItemType("ThornBag")), 1);
-				recipe.AddRecipe();
-				recipe = new ModRecipe(this);
-				recipe.AddIngredient(this.GetItem("EmptyTreasureBag"));
-				recipe.AddIngredient((ModLoader.GetMod("Redemption").ItemType("HeartOfTheThorns")), 1);
-				recipe.AddIngredient(ItemID.JungleSpores, 10);
-				recipe.AddIngredient((ModLoader.GetMod("Redemption").ItemType("CursedThornBow")), 1);
-				recipe.AddTile(TileID.DemonAltar);
-				recipe.SetResult((ModLoader.GetMod("Redemption").ItemType("ThornBag")), 1);
-				recipe.AddRecipe();
-				recipe = new ModRecipe(this);
-				recipe.AddIngredient(this.GetItem("EmptyTreasureBag"));
-				recipe.AddIngredient((ModLoader.GetMod("Redemption").ItemType("HeartOfTheThorns")), 1);
-				recipe.AddIngredient(ItemID.JungleSpores, 10);
-				recipe.AddIngredient((ModLoader.GetMod("Redemption").ItemType("RootTendril")), 1);
-				recipe.AddTile(TileID.DemonAltar);
-				recipe.SetResult((ModLoader.GetMod("Redemption").ItemType("ThornBag")), 1);
-				recipe.AddRecipe();
-				recipe = new ModRecipe(this);
-				recipe.AddIngredient(this.GetItem("EmptyTreasureBag"));
-				recipe.AddIngredient((ModLoader.GetMod("Redemption").ItemType("HeartOfTheThorns")), 1);
-				recipe.AddIngredient(ItemID.JungleSpores, 10);
-				recipe.AddIngredient((ModLoader.GetMod("Redemption").ItemType("ThornSeedBag")), 1);
+				recipe.AddIngredient(ItemID.Vine, 50);
 				recipe.AddTile(TileID.DemonAltar);
 				recipe.SetResult((ModLoader.GetMod("Redemption").ItemType("ThornBag")), 1);
 				recipe.AddRecipe();
@@ -1193,8 +1194,9 @@ namespace CraftableTreasureBags
 				// The Keeper loot recipes start here
 				recipe = new ModRecipe(this);
 				recipe.AddIngredient(this.GetItem("EmptyTreasureBag"));
+				recipe.AddIngredient(this.GetItem("SoulPendantAnimated"));
 				recipe.AddIngredient((ModLoader.GetMod("Redemption").ItemType("MysteriousTabletCrimson")), 1);
-				recipe.AddIngredient((ModLoader.GetMod("Redemption").ItemType("DarkShard")), 4);
+				recipe.AddIngredient((ModLoader.GetMod("Redemption").ItemType("DarkShard")), 8);
 				recipe.AddIngredient((ModLoader.GetMod("Redemption").ItemType("OldGathicWaraxe")), 1);
 				recipe.AddTile(TileID.DemonAltar);
 				recipe.SetResult((ModLoader.GetMod("Redemption").ItemType("TheKeeperBag")), 1);
@@ -1202,7 +1204,8 @@ namespace CraftableTreasureBags
 				recipe = new ModRecipe(this);
 				recipe.AddIngredient(this.GetItem("EmptyTreasureBag"));
 				recipe.AddIngredient((ModLoader.GetMod("Redemption").ItemType("MysteriousTabletCorrupt")), 1);
-				recipe.AddIngredient((ModLoader.GetMod("Redemption").ItemType("DarkShard")), 4);
+				recipe.AddIngredient(this.GetItem("SoulPendantAnimated"));
+				recipe.AddIngredient((ModLoader.GetMod("Redemption").ItemType("DarkShard")), 8);
 				recipe.AddIngredient((ModLoader.GetMod("Redemption").ItemType("OldGathicWaraxe")), 1);
 				recipe.AddTile(TileID.DemonAltar);
 				recipe.SetResult((ModLoader.GetMod("Redemption").ItemType("TheKeeperBag")), 1);
@@ -1211,25 +1214,9 @@ namespace CraftableTreasureBags
 				// Seed of Infection loot recipes start here
 				recipe = new ModRecipe(this);
 				recipe.AddIngredient(this.GetItem("EmptyTreasureBag"));
+				recipe.AddIngredient(this.GetItem("SoulPendantAnimated"));
 				recipe.AddIngredient((ModLoader.GetMod("Redemption").ItemType("GeigerCounter")), 1);
-				recipe.AddIngredient((ModLoader.GetMod("Redemption").ItemType("XenomiteShard")), 30);
-				recipe.AddIngredient((ModLoader.GetMod("Redemption").ItemType("XenomiteGlaive")), 1);
-				recipe.AddTile(TileID.DemonAltar);
-				recipe.SetResult((ModLoader.GetMod("Redemption").ItemType("XenomiteCrystalBag")), 1);
-				recipe.AddRecipe();
-				recipe = new ModRecipe(this);
-				recipe.AddIngredient(this.GetItem("EmptyTreasureBag"));
-				recipe.AddIngredient((ModLoader.GetMod("Redemption").ItemType("GeigerCounter")), 1);
-				recipe.AddIngredient((ModLoader.GetMod("Redemption").ItemType("XenomiteShard")), 30);
-				recipe.AddIngredient((ModLoader.GetMod("Redemption").ItemType("XenomiteYoyo")), 1);
-				recipe.AddTile(TileID.DemonAltar);
-				recipe.SetResult((ModLoader.GetMod("Redemption").ItemType("XenomiteCrystalBag")), 1);
-				recipe.AddRecipe();
-				recipe = new ModRecipe(this);
-				recipe.AddIngredient(this.GetItem("EmptyTreasureBag"));
-				recipe.AddIngredient((ModLoader.GetMod("Redemption").ItemType("GeigerCounter")), 1);
-				recipe.AddIngredient((ModLoader.GetMod("Redemption").ItemType("XenomiteShard")), 30);
-				recipe.AddIngredient((ModLoader.GetMod("Redemption").ItemType("XenoCanister")), 1);
+				recipe.AddIngredient((ModLoader.GetMod("Redemption").ItemType("XenomiteShard")), 50);
 				recipe.AddTile(TileID.DemonAltar);
 				recipe.SetResult((ModLoader.GetMod("Redemption").ItemType("XenomiteCrystalBag")), 1);
 				recipe.AddRecipe();
@@ -1237,6 +1224,7 @@ namespace CraftableTreasureBags
 				// HARDMODE LOOT RECIPES START HERE!!!
 				recipe = new ModRecipe(this);
 				recipe.AddIngredient(this.GetItem("EmptyTreasureBag"));
+				recipe.AddIngredient(this.GetItem("SoulPendant2Animated"));
 				recipe.AddIngredient((ModLoader.GetMod("Redemption").ItemType("XenoEye")), 1);
 				recipe.AddIngredient((ModLoader.GetMod("Redemption").ItemType("AntiXenomiteApplier")), 6);
 				recipe.AddIngredient((ModLoader.GetMod("Redemption").ItemType("Xenomite")), 15);
@@ -1245,6 +1233,7 @@ namespace CraftableTreasureBags
 				recipe.AddRecipe();
 				recipe = new ModRecipe(this);
 				recipe.AddIngredient(this.GetItem("EmptyTreasureBag"));
+				recipe.AddIngredient(this.GetItem("SoulPendant2Animated"));
 				recipe.AddIngredient((ModLoader.GetMod("Redemption").ItemType("KingSummon")), 1);
 				recipe.AddIngredient((ModLoader.GetMod("Redemption").ItemType("CyberPlating")), 14);
 				recipe.AddIngredient((ModLoader.GetMod("Redemption").ItemType("KingCore")), 1);
@@ -1255,6 +1244,7 @@ namespace CraftableTreasureBags
 				recipe.AddRecipe();
 				recipe = new ModRecipe(this);
 				recipe.AddIngredient(this.GetItem("EmptyTreasureBag"));
+				recipe.AddIngredient(this.GetItem("SoulPendant2Animated"));
 				recipe.AddIngredient((ModLoader.GetMod("Redemption").ItemType("CorruptedHeroSword")), 1);
 				recipe.AddIngredient((ModLoader.GetMod("Redemption").ItemType("CorruptedXenomite")), 18);
 				recipe.AddIngredient((ModLoader.GetMod("Redemption").ItemType("VlitchBattery")), 2);
@@ -1263,6 +1253,7 @@ namespace CraftableTreasureBags
 				recipe.AddRecipe();
 				recipe = new ModRecipe(this);
 				recipe.AddIngredient(this.GetItem("EmptyTreasureBag"));
+				recipe.AddIngredient(this.GetItem("SoulPendant2Animated"));
 				recipe.AddIngredient((ModLoader.GetMod("Redemption").ItemType("CorruptedWormMedallion")), 1);
 				recipe.AddIngredient((ModLoader.GetMod("Redemption").ItemType("CorruptedXenomite")), 24);
 				recipe.AddIngredient((ModLoader.GetMod("Redemption").ItemType("VlitchBattery")), 3);
@@ -1274,15 +1265,17 @@ namespace CraftableTreasureBags
 				// POST-MOON LORD LOOT RECIPES START HERE!!!
 				recipe = new ModRecipe(this);
 				recipe.AddIngredient(this.GetItem("EmptyTreasureBag"));
+				recipe.AddIngredient(this.GetItem("XeniumPendantAnimated"));
 				recipe.AddIngredient((ModLoader.GetMod("Redemption").ItemType("OmegaRadar")), 1);
 				recipe.AddIngredient((ModLoader.GetMod("Redemption").ItemType("CorruptedXenomite")), 50);
 				recipe.AddIngredient((ModLoader.GetMod("Redemption").ItemType("VlitchBattery")), 10);
-				recipe.AddIngredient((ModLoader.GetMod("Redemption").ItemType("OblitBrain")), 24);
+				recipe.AddIngredient((ModLoader.GetMod("Redemption").ItemType("OblitBrain")), 1);
 				recipe.AddTile(TileID.DemonAltar);
 				recipe.SetResult((ModLoader.GetMod("Redemption").ItemType("OmegaOblitBag")), 1);
 				recipe.AddRecipe();
 				recipe = new ModRecipe(this);
 				recipe.AddIngredient(this.GetItem("EmptyTreasureBag"));
+				recipe.AddIngredient(this.GetItem("XeniumPendantAnimated"));
 				recipe.AddIngredient((ModLoader.GetMod("Redemption").ItemType("MedicKit1")), 1);
 				recipe.AddIngredient((ModLoader.GetMod("Redemption").ItemType("BluePrints")), 1);
 				recipe.AddIngredient((ModLoader.GetMod("Redemption").ItemType("Xenomite")), 30);
@@ -1293,22 +1286,23 @@ namespace CraftableTreasureBags
 				// Ancient Deity loot recipes start here
 				recipe = new ModRecipe(this);
 				recipe.AddIngredient(this.GetItem("EmptyTreasureBag"));
+				recipe.AddIngredient(this.GetItem("XeniumPendantAnimated"));
 				recipe.AddIngredient((ModLoader.GetMod("Redemption").ItemType("SigilOfThorns")), 1);
 				recipe.AddIngredient((ModLoader.GetMod("Redemption").ItemType("TuhonAura")), 1);
 				recipe.AddIngredient((ModLoader.GetMod("Redemption").ItemType("Verenhimo")), 1);
-				recipe.AddIngredient((ModLoader.GetMod("Redemption").ItemType("CursedThorns")), 20);
+				recipe.AddIngredient((ModLoader.GetMod("Redemption").ItemType("CursedThorns")), 30);
 				recipe.AddTile(TileID.DemonAltar);
 				recipe.SetResult((ModLoader.GetMod("Redemption").ItemType("AkkaBag")), 1);
 				recipe.AddRecipe();
-				recipe = new ModRecipe(this);
-				recipe.AddIngredient(this.GetItem("EmptyTreasureBag"));
-				recipe.AddIngredient((ModLoader.GetMod("Redemption").ItemType("SigilOfThorns")), 1);
-				recipe.AddIngredient((ModLoader.GetMod("Redemption").ItemType("ViisaanKantele")), 1);
-				recipe.AddIngredient((ModLoader.GetMod("Redemption").ItemType("UkonRuno")), 1);
-				recipe.AddIngredient((ModLoader.GetMod("Redemption").ItemType("AncientPowerCore")), 20);
-				recipe.AddTile(TileID.DemonAltar);
-				recipe.SetResult((ModLoader.GetMod("Redemption").ItemType("UkkoBag")), 1);
-				recipe.AddRecipe();
+			//	recipe = new ModRecipe(this);
+			//	recipe.AddIngredient(this.GetItem("EmptyTreasureBag"));
+			//	recipe.AddIngredient((ModLoader.GetMod("Redemption").ItemType("SigilOfThorns")), 1);
+			//	recipe.AddIngredient((ModLoader.GetMod("Redemption").ItemType("ViisaanKantele")), 1);
+			//	recipe.AddIngredient((ModLoader.GetMod("Redemption").ItemType("UkonRuno")), 1);
+			//	recipe.AddIngredient((ModLoader.GetMod("Redemption").ItemType("AncientPowerCore")), 30);
+			//	recipe.AddTile(TileID.DemonAltar);
+			//	recipe.SetResult((ModLoader.GetMod("Redemption").ItemType("UkkoBag")), 1);
+			//	recipe.AddRecipe();
 				// Ancient Deity loot recipes end here
 			}
 			// Modded Treasure Bags: Elements Awoken

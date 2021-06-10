@@ -95,16 +95,19 @@ namespace CraftableTreasureBags.Items.ThoriumMod
 
 		public override void AddRecipes()
 		{
-			var recipe = new ModRecipe(mod);
-			recipe.AddIngredient(ModContent.ItemType<DangerPendant>());
-			recipe.AddIngredient((ModLoader.GetMod("ThoriumMod").ItemType("AbyssalChitin")), 5);
-			recipe.AddIngredient((ModLoader.GetMod("ThoriumMod").ItemType("SpiritDroplet")), 1);
-			recipe.AddIngredient((ModLoader.GetMod("ThoriumMod").ItemType("DepthScale")), 2);
-			recipe.AddIngredient((ModLoader.GetMod("ThoriumMod").ItemType("FishScale")), 1);
-			//recipe.AddTile((ModLoader.GetMod("ThoriumMod").TileType("ArcaneArmorFabricator")));
-			recipe.AddTile(TileID.MythrilAnvil);
-			recipe.SetResult(this);
-			recipe.AddRecipe();
+			if (ModLoader.GetMod("ThoriumMod") != null)
+            {
+				ModRecipe recipe = new ModRecipe(mod);
+				recipe.AddIngredient(ModContent.ItemType<DangerPendant>());
+				recipe.AddIngredient((ModLoader.GetMod("ThoriumMod").ItemType("AbyssalChitin")), 5);
+				recipe.AddIngredient((ModLoader.GetMod("ThoriumMod").ItemType("SpiritDroplet")), 1);
+				recipe.AddIngredient((ModLoader.GetMod("ThoriumMod").ItemType("DepthScale")), 2);
+				recipe.AddIngredient((ModLoader.GetMod("ThoriumMod").ItemType("FishScale")), 1);
+				//recipe.AddTile((ModLoader.GetMod("ThoriumMod").TileType("ArcaneArmorFabricator")));
+				recipe.AddTile(TileID.MythrilAnvil);
+				recipe.SetResult(this);
+				recipe.AddRecipe();
+			}
 		}
 	}
 }

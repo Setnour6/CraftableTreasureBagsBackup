@@ -85,8 +85,8 @@ namespace CraftableTreasureBags.Items.SpiritMod
 			{
 				if (line2.mod == "Terraria" && line2.Name == "ItemName")
 				{
-					float fade = Main.GameUpdateCount % 60 / 60f;
-					int index = (int)(Main.GameUpdateCount / 60 % 5);
+					float fade = Main.GameUpdateCount % 120 / 120f;
+					int index = (int)(Main.GameUpdateCount / 120 % 5);
 					line2.overrideColor = Color.Lerp(itemNameCycleColors[index], itemNameCycleColors[(index + 1) % 5], fade);
 				}
 			}

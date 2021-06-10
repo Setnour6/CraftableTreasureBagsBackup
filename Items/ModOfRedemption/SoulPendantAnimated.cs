@@ -7,14 +7,9 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.DataStructures;
-using Terraria.Enums;
-using Terraria.GameContent;
 using Terraria.UI;
 using Terraria.ID;
-using Terraria.IO;
 using Terraria.ModLoader;
-using Terraria.GameInput;
-using Terraria.Graphics;
 using Terraria.Graphics.Effects;
 using Terraria.Graphics.Shaders;
 using Terraria.Localization;
@@ -22,23 +17,24 @@ using static Terraria.ModLoader.ModContent;
 using System.Runtime.InteropServices;
 using ReLogic.Graphics;
 using Terraria.GameContent.UI;
-using Terraria.ObjectData;
-using Terraria.Social;
 using Terraria.ModLoader.Exceptions;
 
-namespace CraftableTreasureBags.Items.SpiritMod
+namespace CraftableTreasureBags.Items.ModOfRedemption
 {
-	public class BismitePendant : ModItem
+	public class SoulPendantAnimated : ModItem
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Bismite Pendant");
+			DisplayName.SetDefault("Soul Pendant");
 			Tooltip.SetDefault("Not Equippable"
-				+ $"\nUsed to make boss treasure bags from the [c/6E8CB4:Spirit] Mod"
+				+ $"\n[c/FF8F00:Not to be confused with the Soulful Pendant for the Ancients Awakened Mod]"
+				+ $"\nUsed to make boss treasure bags from the [c/6E8CB4:Mod of Redemption]"
+				+ $"\n - While favorited in your inventory, you take 2% less damage, and jump slightly higher."
+				+ $"\n - However, you're movement speed is reduced by 2.5%, and run acceleration is lowered by 25%"
 				+ $"\nCan be upgraded for use with hardmode treasure bags"
-				+ $"\n - While favorited in your inventory, your critical strike chance increases by 2%, and movement speed by 3%."
-				+ $"\n - However, enemies are more likely to target you."
-				+ $"\n'Putting this on makes you one of those discord kids, so it's best to just hold on to it'");
+				+ $"\n'Putting this on makes you're own soul float, so it's best to just hold on to it'");
+			Main.RegisterItemAnimation(item.type, new DrawAnimationVertical(8, 6));
+
 		}
 
 		public override void SetDefaults()
@@ -47,25 +43,23 @@ namespace CraftableTreasureBags.Items.SpiritMod
 			item.height = 50;
 			item.maxStack = 99;
 			item.value = 1000;
-			item.rare = 1;
+			item.rare = 2;
 		}
 
 		public override void UpdateInventory(Player player)
-        {
+		{
 			if (item.favorited)
-            {
-				player.meleeCrit += 2;
-				player.rangedCrit += 2;
-				player.magicCrit += 2;
-				player.thrownCrit += 2;
-				player.moveSpeed += 0.03f;
-				player.aggro += 800;
+			{
+				player.endurance += 0.02f;
+				player.moveSpeed -= 0.025f;
+				player.jumpSpeedBoost += 0.6f;
+				player.runAcceleration -= 0.02f;
 			}
-        }
+		}
 
 		Color[] itemNameCycleColors = new Color[]{
-			new Color(160, 200, 95),
-			new Color(100, 110, 85)
+			new Color(85, 125, 120),
+			new Color(255, 255, 255)
 		};
 
 		public override void ModifyTooltips(List<TooltipLine> tooltips)
@@ -84,12 +78,13 @@ namespace CraftableTreasureBags.Items.SpiritMod
 
 		public override void AddRecipes()
 		{
-			if (ModLoader.GetMod("SpiritMod") != null)
-            {
-				ModRecipe recipe = new ModRecipe(mod);
+			if (ModLoader.GetMod("Redemption") != null)
+			{
+				var recipe = new ModRecipe(mod);
 				recipe.AddRecipeGroup("CraftableTreasureBags:Gold/Platinum Pendant");
-				recipe.AddIngredient((ModLoader.GetMod("SpiritMod").ItemType("BismiteCrystal")), 4);
-				recipe.AddTile(TileID.Anvils);
+				recipe.AddIngredient((ModLoader.GetMod("Redemption").ItemType("SmallLostSoul")), 8);
+				recipe.AddTile((ModLoader.GetMod("Redemption").TileType("DruidicAltarTile")));
+				//recipe.AddTile(TileID.Anvils);
 				recipe.SetResult(this);
 				recipe.AddRecipe();
 			}

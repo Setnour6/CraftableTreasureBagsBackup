@@ -27,6 +27,7 @@ namespace CraftableTreasureBags.Items.AncientsAwakened
 		{
 			DisplayName.SetDefault("Soulful Pendant");
 			Tooltip.SetDefault("Not Equippable"
+				+ $"\n[c/FF8F00:Not to be confused with the Soul Pendant for the Mod of Redemption]"
 				+ $"\nUsed to make Post-Moon Lord boss treasure bags from the [c/6E8CB4:Ancients Awakened] Mod"
 				+ $"\n - While favorited in your inventory, you deal 20% more damage and gain 4% of critical strike chance."
 				//+ $"\n - However, you take 15% more damage, and your health is lowered by one tenth of your max life (1 ÷ 10)."
@@ -43,7 +44,7 @@ namespace CraftableTreasureBags.Items.AncientsAwakened
 			item.height = 50;
 			item.maxStack = 99;
 			item.value = 1000;
-			item.rare = 2;
+			item.rare = 11;
 		}
 
 		public override void UpdateInventory(Player player)

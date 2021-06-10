@@ -74,13 +74,16 @@ namespace CraftableTreasureBags.Items.ThoriumMod
 
 		public override void AddRecipes()
 		{
-			var recipe = new ModRecipe(mod);
-			recipe.AddRecipeGroup("CraftableTreasureBags:Gold/Platinum Pendant");
-			recipe.AddIngredient((ModLoader.GetMod("ThoriumMod").ItemType("DangerShard")), 4);
-			recipe.AddTile((ModLoader.GetMod("ThoriumMod").TileType("ArcaneArmorFabricator")));
-			//recipe.AddTile(TileID.Anvils);
-			recipe.SetResult(this);
-			recipe.AddRecipe();
+			if (ModLoader.GetMod("ThoriumMod") != null)
+            {
+				var recipe = new ModRecipe(mod);
+				recipe.AddRecipeGroup("CraftableTreasureBags:Gold/Platinum Pendant");
+				recipe.AddIngredient((ModLoader.GetMod("ThoriumMod").ItemType("DangerShard")), 4);
+				recipe.AddTile((ModLoader.GetMod("ThoriumMod").TileType("ArcaneArmorFabricator")));
+				//recipe.AddTile(TileID.Anvils);
+				recipe.SetResult(this);
+				recipe.AddRecipe();
+			}
 		}
 	}
 }

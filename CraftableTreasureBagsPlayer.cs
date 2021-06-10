@@ -30,12 +30,12 @@ namespace CraftableTreasureBags
 	// several effects and items in ExampleMod. See SimpleModPlayer for a very simple example of how ModPlayer classes work.
 	public class CraftableTreasureBagsPlayer : ModPlayer
 	{
-		public override void SetupStartInventory(IList<Item> items, bool mediumcoreDeath)
-		{
-			Item item = new Item();
-			item.SetDefaults(ModContent.ItemType<CelebratoryPendant>());
-			item.stack = 1;
-			items.Add(item);
-		}
+		//public override void SetupStartInventory(IList<Item> items, bool mediumcoreDeath)
+		//{
+		//	Item item = new Item();
+		//	item.SetDefaults(ModContent.ItemType<CelebratoryPendant>());
+		//	item.stack = 1;
+		//	items.Add(item);
+		//}
 	}
 }

@@ -14,13 +14,13 @@ This mod includes modded treasure bag recipes for the following mods:
 - Elements Awoken
 - Enigma
 - Joost
-- Mod of Redemption
+- Mod of Redemption [i/s1:75]
 - [c/f79bcf:Pinkymod]
 - Qwerty's Bosses and Items
 - Shadows of Abaddon
 - Spirit [i/s1:75]
 - Split
-- Thorium
+- Thorium [i/s1:75]
 - Ultranium
 [i/s1:75] = Overhauled most/all recipes and/or added a treasure item.
 
@@ -40,14 +40,17 @@ Email: set.nour6@gmail.com
 
 ~~~~~~
 
-EVENT: You can now craft a pre-hardmode treasure bag of your choice with the Celebratory Pendant, which appears upon character creation.
-
 Version 0.16:
+- The event ended. Thanks to those that participated.
+- Fixed a description mistake where Thorium wasn't listed as having overhauled recipes (indicated by the star [i/s1:75]).
 - Fixed an issue where the Spirit Pendant would have some of the same tooltips as the Bismite Pendant (Spirit Mod)
 - Added Danger Pendant and Abyssal Pendant, which can only be obtained if the Thorium Mod is enabled.
+- Added two Soul Pendants (one is charged) and the Xenium Pendant for the Mod of Redemption.
 - All Vanilla boss treasure bags now require Danger Shards to craft (If the Thorium Mod is enabled).
-- Changed all of the recipes for the Thorium Mod boss treasure bags. (Removing weapon loot to craft, adding herbs and other items to craft with, pendants as well, etc.)
-- One celebratory pendant gets loaded into your inventory upon character creation instead of two (I gave you all two chances, and now you get one.)
+- Changed all of the recipes for the Thorium Mod and Mod of Redemption boss treasure bags. (Removing weapon loot to craft, adding herbs and other items to craft with, pendants as well, etc.)
+- Fixed an issue where Omega Oblitorator's treasure bag costed 24 Oblitorator brains to craft instead of 1 (Mod of Redemption).
+- Ukko's Treasure Bag is no longer craftable, due to it not including an expert mode item (Mod of Redemption)
+- Fixed some pendant stuff that I do not remember.
 
 Version 0.15.1:
 - Reworked all pendants, due to a fatal tModLoader bug that wiped out all of my game data and mod data.
