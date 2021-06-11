@@ -37,7 +37,7 @@ namespace CraftableTreasureBags.Items.SpiritMod
 				+ $"\nUsed to make boss treasure bags from the [c/6E8CB4:Spirit] Mod"
 				+ $"\nCan be upgraded for use with hardmode treasure bags"
 				+ $"\n - While favorited in your inventory, your critical strike chance increases by 2%, and movement speed by 3%."
-				+ $"\n - However, enemies are more likely to target you."
+				+ $"\n - However, enemies are slightly more likely to target you."
 				+ $"\n'Putting this on makes you one of those discord kids, so it's best to just hold on to it'");
 		}
 
@@ -59,7 +59,7 @@ namespace CraftableTreasureBags.Items.SpiritMod
 				player.magicCrit += 2;
 				player.thrownCrit += 2;
 				player.moveSpeed += 0.03f;
-				player.aggro += 800;
+				player.aggro += 100;
 			}
         }
 

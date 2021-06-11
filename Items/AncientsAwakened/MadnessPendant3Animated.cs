@@ -29,9 +29,9 @@ namespace CraftableTreasureBags.Items.AncientsAwakened
 			Tooltip.SetDefault("Not Equippable"
 				+ $"\n[c/FF8F00:Not to be confused with the Soul Pendant for the Mod of Redemption]"
 				+ $"\nUsed to make Post-Moon Lord boss treasure bags from the [c/6E8CB4:Ancients Awakened] Mod"
-				+ $"\n - While favorited in your inventory, you deal 20% more damage and gain 4% of critical strike chance."
+				+ $"\n - While favorited in your inventory, you deal 20% more damage and gain 12% of critical strike chance."
 				//+ $"\n - However, you take 15% more damage, and your health is lowered by one tenth of your max life (1 ÷ 10)."
-				+ $"\n - However, you take 15% more damage, and your health is lowered by 50."
+				+ $"\n - However, you take 15% more damage, your health is lowered by 50, and mana cost is 10% higher."
 				+ $"\n'Putting this on makes you even madder, and your soul enraged, and hurts your neck even more, so it's best to just hold on to it'");
 
 			Main.RegisterItemAnimation(item.type, new DrawAnimationVertical(8, 6));
@@ -53,10 +53,11 @@ namespace CraftableTreasureBags.Items.AncientsAwakened
             {
 				player.allDamage += 0.1f;
 				player.endurance -= 0.15f;
-				player.meleeCrit += 4;
-				player.rangedCrit += 4;
-				player.magicCrit += 4;
-				player.thrownCrit += 4;
+				player.meleeCrit += 12;
+				player.rangedCrit += 12;
+				player.magicCrit += 12;
+				player.thrownCrit += 12;
+				player.manaCost -= 0.1f;
 				//player.statLifeMax2 /= 10;
 				player.statLifeMax2 -= 50;
 			}

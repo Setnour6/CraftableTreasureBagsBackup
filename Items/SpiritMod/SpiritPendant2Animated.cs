@@ -61,7 +61,7 @@ namespace CraftableTreasureBags.Items.SpiritMod
 				player.magicCrit += 4;
 				player.thrownCrit += 4;
 				player.moveSpeed += 0.06f;
-				player.aggro += 8000;
+				player.aggro += 2000;
 			}
 			else
             {

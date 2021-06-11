@@ -29,7 +29,7 @@ namespace CraftableTreasureBags.Items.AncientsAwakened
 			Tooltip.SetDefault("Not Equippable"
 				+ $"\nUsed to make boss treasure bags from the [c/6E8CB4:Ancients Awakened] Mod"
 				+ $"\nCan be upgraded for use with hardmode treasure bags"
-				+ $"\n - While favorited in your inventory, you deal 5% more damage."
+				+ $"\n - While favorited in your inventory, you deal 5% more damage and have 4% more critical strike chance."
 				+ $"\n - However, you take 5% more damage."
 				+ $"\n'Putting this on makes you mad and hurts your neck, so it's best to just hold on to it'");
 		}
@@ -48,6 +48,10 @@ namespace CraftableTreasureBags.Items.AncientsAwakened
 			if (item.favorited)
             {
 				player.allDamage += 0.05f;
+				player.meleeCrit += 4;
+				player.rangedCrit += 4;
+				player.magicCrit += 4;
+				player.thrownCrit += 4;
 				player.endurance -= 0.05f;
 			}
         }

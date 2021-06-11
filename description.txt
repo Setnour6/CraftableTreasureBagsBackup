@@ -51,6 +51,7 @@ Version 0.16:
 - Fixed an issue where Omega Oblitorator's treasure bag costed 24 Oblitorator brains to craft instead of 1 (Mod of Redemption).
 - Ukko's Treasure Bag is no longer craftable, due to it not including an expert mode item (Mod of Redemption)
 - Fixed some pendant stuff that I do not remember.
+- Buffed all pendants for the Ancients Awakened Mod.
 
 Version 0.15.1:
 - Reworked all pendants, due to a fatal tModLoader bug that wiped out all of my game data and mod data.

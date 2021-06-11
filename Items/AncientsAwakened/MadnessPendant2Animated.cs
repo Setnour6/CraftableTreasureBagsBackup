@@ -29,8 +29,8 @@ namespace CraftableTreasureBags.Items.AncientsAwakened
 			Tooltip.SetDefault("Not Equippable"
 				+ $"\nUsed to make Hardmode boss treasure bags from the [c/6E8CB4:Ancients Awakened] Mod"
 				+ $"\nCan be upgraded for use with Post-Moon Lord treasure bags"
-				+ $"\n - While favorited in your inventory, you deal 10% more damage."
-				+ $"\n - However, you take 10% more damage."
+				+ $"\n - While favorited in your inventory, you deal 10% more damage, gain 8% more melee critical strike chance, and 6% other critical strike chance."
+				+ $"\n - However, you take 8% more damage, and mana cost is 5% higher."
 				+ $"\n'Putting this on makes you madder and hurts your neck more, so it's best to just hold on to it'");
 			
 			Main.RegisterItemAnimation(item.type, new DrawAnimationVertical(8, 6));
@@ -51,6 +51,11 @@ namespace CraftableTreasureBags.Items.AncientsAwakened
 			if (item.favorited)
             {
 				player.allDamage += 0.1f;
+				player.meleeCrit += 8;
+				player.rangedCrit += 6;
+				player.magicCrit += 6;
+				player.thrownCrit += 6;
+				player.manaCost -= 0.05f;
 				player.endurance -= 0.1f;
 			}
         }
